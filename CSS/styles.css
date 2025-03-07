@@ -1,0 +1,41 @@
+:root{
+/*Colors Styles*/
+    --Primary-Saturado: #F6572C;
+    --Primary-Claro: #FB7171;
+    --Primary-Oscuro: #942406;
+    
+    --Secundary-Saturado: #EBF52A;
+    --Secundary-Claro: #EEF294;
+    --Secundary-Oscuro: #DFCE39;
+    
+    --Tinta-Gris: #2A5A4F;
+    --Tinta-Claro: #B2ACAC;
+    --Tinta-Negro: #000;
+    
+    --Complementos-Blanco: #FFF;
+    --Complementos-Celeste: #B2E2FF;
+    --Complementos-Azul: #3746CC;
+
+    /* Text Styles */
+    --sizeH1: 44px;
+    --sizeH2: 32px;
+    --sizeH3: 24px;
+    --sizeH4: 16px;
+    --sizeText: 1em;
+    --sizeTextSmall: 13px;
+    --Lato: lato;
+    --Mont: Montserrat;
+
+    /* Shadows  */
+   /* SOMBRA H: box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.25); */
+   /* SOMBRA ARTICLE: box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.35); */
+   /* SOMBRA BOTON: box-shadow: 1px 1px 2px 0px #000; */
+   /* SOMBRA BOTON2: box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.40); */
+   /* SOMBRA BOX-PAGO: box-shadow: 1px 1px 2.7px 0px rgba(0, 0, 0, 0.30); */
+   /* SOMBRA CARD-HORARIO: box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.20);*/
+   /* SOMBRA NAV-SCRIOL: box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25); backdrop-filter: blur(3px); */
+   /* SOMBRA TEXT DEL NAV-SCRIOL:  text-shadow: 2px 2px 3.5px rgba(0,0,0,0.25); */
+   /* SOMBRA SIDER-MENU: box-shadow: 0.5px 0.5px 1.6px 0px rgba(0, 0, 0, 0.60); 
+*/
+
+}

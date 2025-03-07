@@ -1,0 +1,237 @@
+@import "styles.css";
+
+/*                                  Mobile-first                                        */
+.hero {
+    min-height: 450px;
+    height: 100vh;
+    width: 100%;
+    background: url(../MEDIA/PHOTOS/bgd\(359px\).jpg) no-repeat;
+    background-size: cover;
+    background-position: -40 -10px;
+    /* Dsipositivos movile no funciona attachment, revisar libreria parallax */
+
+    @media screen and (width > 420px) {
+        background: url(../MEDIA/PHOTOS/bgd\(639px\).jpg) no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center -50px;
+
+    }
+
+    @media screen and (width > 660px) {
+        background: url(../MEDIA/PHOTOS/bgd\(639px\).jpg) no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center -20px;
+    }
+
+    @media screen and (width > 820px) {
+        background: url(../MEDIA/PHOTOS/bgd\(1279px\).jpg) no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center -20px;
+    }
+
+    @media screen and (width > 1279px) {
+        background: url(../MEDIA/PHOTOS/bgd\(1920px\).jpg) no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center -40px;
+    }
+
+    @media screen and (width > 1540px) {
+        background: url(../MEDIA/PHOTOS/bgd\(1920px\).jpg) no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center -60px;
+    }
+
+    /* breakpoint tablets and mobile in landscape*/
+    @media screen and (width < 1440px) and (orientation: landscape) {
+        min-height: 640px;
+        background-attachment: scroll;
+    }
+}
+
+.container--hero {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: start;
+
+
+    background: linear-gradient(180deg, rgba(212, 212, 212, 0.16010154061624648) 0%, rgba(0, 0, 0, 0.281) 0%, rgba(212, 212, 212, 0) 100%);
+
+    /* breakpoint tablet-small */
+    @media screen and (width > 360px) {
+        background: linear-gradient(180deg, rgba(212, 212, 212, 0) 0%, rgba(0, 0, 0, 0.247) 0%, rgba(212, 212, 212, 0.02953596287703013) 100%);
+    }
+
+    /* breakpoint tablet */
+    @media screen and (width > 640px) {
+        background: linear-gradient(180deg, rgba(212, 212, 212, 0.3039443155452436) 0%, rgba(0, 0, 0, 0.226) 0%, rgba(212, 212, 212, 0.04176334106728541) 100%);
+    }
+
+    /* breakpoint desktop */
+    @media screen and (width > 1280px) {
+        background: linear-gradient(180deg, rgba(212, 212, 212, 0) 0%, rgba(0, 0, 0, 0.244) 0%, rgba(212, 212, 212, 0) 100%);
+    }
+}
+
+.top--hero {
+    z-index: 1000;
+    padding: 8px 20px;
+
+
+    /* breakpoint tablet */
+    @media screen and (width >=360px) {
+        padding: 8px 6.26%;
+    }
+
+    /* breakpoint tablet */
+    @media screen and (width > 640px) {
+        padding: 10px 6.2%;
+    }
+
+    /* breakpoint desktop */
+    @media screen and (width > 1280px) {
+        padding: 12px 36px;
+    }
+
+    /* breakpoint tablets and mobile in landscape*/
+    @media screen and (width < 640px) and (orientation: landscape) {
+        padding: 8px 6%;
+    }
+}
+
+.conteiner-nav--hero {
+    margin-top: 20%;
+
+    /* breakpoint tablet-small */
+    @media screen and (width > 360px) {
+        margin-top: clamp(75px, 20%, 115px);
+    }
+
+    /* breakpoint tablet */
+    @media screen and (width > 640px) {
+        margin-top: clamp(130px, 20%, 160px);
+    }
+
+    /* breakpoint desktop */
+    @media screen and (width > 1280px) {
+        margin-top: clamp(110px, 25%, 150px);
+    }
+
+    /* breakpoint tablets and mobile in landscape*/
+    @media screen and (width < 1280px) and (orientation: landscape) {
+        margin-top: clamp(110px, 20%, 140px)
+    }
+}
+
+h1 {
+    margin-top: 46px;
+    padding: 0 38px;
+    user-select: none;
+    color: var(--Complementos-Blanco);
+    font-family: var(--Mont);
+    font-size: 24px;
+    text-shadow: 3px 1px 2px rgba(0, 0, 0, 0.30);
+    text-align: center;
+
+    /* breakpoint tablet-small */
+    @media screen and (width > 360px) {
+        margin-top: 56px;
+        font-size: 28px;
+        padding: 0 6.50%;
+    }
+
+    /* breakpoint tablet */
+    @media screen and (width > 640px) {
+        margin-top: 52px;
+        padding: 0 14%;
+        min-width: 458px;
+        max-width: 1015px;
+        font-size: 40px;
+    }
+
+    /* breakpoint desktop */
+    @media screen and (width > 1280px) {
+        margin-top: 5.89%;
+        padding: 0 240px;
+        min-width: 675px;
+        max-width: 1596px;
+        font-size: clamp(40px, 3vw, 44px);
+    }
+}
+
+.arrow-down {
+    margin: -20vh auto;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fa-piggy-bank::before {
+    font-size: 18px;
+}
+
+.MW170 {
+    min-width: 170px;
+    text-align: center;
+
+    @media screen and (width <=520px) {
+        min-width: 140px;
+    }
+}
+
+.margin-novedades {
+    margin: 120px 0 48px 0 !important;
+}
+
+.social-novedades {
+    min-width: 250px !important;
+    display: flex !important;
+
+    @media screen and (width <=900px) {
+        min-width: 80px !important;
+    }
+}
+
+.text-logo-novedades {
+    @media screen and (width <=900px) {
+        display: none;
+    }
+}
+
+.conteiner-p-nov {
+    @media screen and (width <=900px) {
+        min-width: 80px !important;
+    }
+}
+
+.info--novedades {
+    @media screen and (width <=450px) {
+        display: none;
+    }
+}
+
+.top-novedades {
+    @media screen and (width > 640px) {
+        padding: 10px 4%;
+    }
+}
+
+.classDivHour{
+    width: 100%;
+    height: 100%;
+}
+
+.classDivB{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 12px;
+}
