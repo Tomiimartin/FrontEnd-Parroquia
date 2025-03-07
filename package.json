@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "dependencies": {
     "dotenv": "^16.4.7"
   },
@@ -10,9 +9,10 @@
     "parcel": "^2.13.3"
   },
   "scripts": {
-  "start": "parcel index.html --open",
-  "build": "parcel build index.html --public-url ./"
-},
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --public-url ./",
+    "prebuild": "for file in *.html; do sed -i 's|${BACKEND_URL}|\"$BACKEND_URL\"|g' \"$file\" && sed -i 's|${STRAPI_URL}|\"$STRAPI_URL\"|g' \"$file\"; done"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tomas-Martin-dev/FrontEnd-Parroquia.git"
@@ -20,7 +20,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/Tomas-Martin-dev/FrontEnd-Parroquia/issues"
   },
