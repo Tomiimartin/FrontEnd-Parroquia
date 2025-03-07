@@ -1,5 +1,6 @@
 import { form, inputTel, inputName, inputEmail, inputSubject, inputTextArea, botonSubmit, loader } from "./selectores.js";
-import urls from "./urls.js"
+import { BACKEND_URL, STRAPI_URL } from "./urls.js";
+
 export function validarTel() {
     if (inputTel.value.length < 10) {
         inputTel.setCustomValidity("Caracteres mínimos: 10");
@@ -56,7 +57,7 @@ export async function validarForm(e) {
     };
 
     try {
-        const response = await fetch(`${urls.URL_SEND_M}send-email`, {
+        const response = await fetch(`${BACKEND_URL}send-email`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
@@ -82,7 +83,7 @@ export async function validarForm(e) {
 }
 
 export async function llamadoNewsCMS() {
-    const url = `${urls.API_URL}news?populate=imagen`;
+    const url = `${STRAPI_URL}news?populate=imagen`;
     try {
         const res = await fetch(url);
         const data = await res.json();
@@ -99,7 +100,7 @@ export async function llamadoNewsCMS() {
 }
 
 export async function llamadoHourCMS() {
-    const url = `${urls.API_URL}hours?populate=imagen`;
+    const url = `${STRAPI_URL}hours?populate=imagen`;
     try {
         const res = await fetch(url);
         const data = await res.json();
@@ -118,7 +119,7 @@ export async function llamadoNew() {
     }
 
     try {
-        const response = await fetch(`${urls.API_URL}news/${Id}?populate=imagen`);
+        const response = await fetch(`${STRAPI_URL}news/${Id}?populate=imagen`);
         const data = await response.json();
         crearNew(data.data)
     } catch (error) {

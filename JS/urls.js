@@ -1,6 +1,2 @@
-let urls = {
-    API_URL : "https://cms-strapi-proyectoparroquia.onrender.com/api/",
-    URL_SEND_M : "https://backend-parroquia.onrender.com/"
-}
-
-export default urls
+export const BACKEND_URL = process.env.BACKEND_URL;
+export const STRAPI_URL = process.env.STRAPI_URL;
