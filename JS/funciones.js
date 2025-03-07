@@ -1,3 +1,4 @@
+import { log } from "node:console";
 import { form, inputTel, inputName, inputEmail, inputSubject, inputTextArea, botonSubmit, loader } from "./selectores.js";
 import { BACKEND_URL, STRAPI_URL } from "./urls.js";
 
@@ -140,7 +141,8 @@ function crearNews(array) {
         img.src = `${url}`;
         img.alt = `${name}`;
         img.loading = "eager"
-
+        
+        
         let div = document.createElement("div");
         div.classList.add("container-text");
 
