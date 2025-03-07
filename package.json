@@ -11,7 +11,7 @@
   "scripts": {
     "start": "parcel index.html --open",
     "build": "parcel build index.html --public-url ./",
-    "prebuild": "for file in *.html; do sed -i 's|${BACKEND_URL}|\"$BACKEND_URL\"|g' \"$file\" && sed -i 's|${STRAPI_URL}|\"$STRAPI_URL\"|g' \"$file\"; done"
+    "prebuild": "node prebuild.js"
   },
   "repository": {
     "type": "git",
