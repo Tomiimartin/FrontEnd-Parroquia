@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "rm -rf dist && parcel build index.html --public-url ./",
+    "build": "rmdir /s /q dist 2>nul || true && parcel build index.html JS/animaciones.js --public-url ./",
     "prebuild": "node prebuild.js"
   },
   "repository": {

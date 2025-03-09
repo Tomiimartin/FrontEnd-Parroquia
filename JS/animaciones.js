@@ -1,7 +1,7 @@
 console.log("js conectado");
 
 // Funcion para scroll del button arrow-down del hero
-function scrollArrowDown() {
+window.scrollArrowDown = function() {
     const sectionNovedades = document.querySelector(".container-section__novedades");
     let largoNav = document.querySelector(".top--hero").offsetHeight;
     let disntacia = sectionNovedades.getBoundingClientRect().top - 36;
@@ -22,7 +22,7 @@ function scrollTop() {
 
 console.log("animaciones carga");
 // funcion/animacion para box de donaciones
-function activarInfo(obj) {
+window.activarInfo =  function(obj) {
     
     let conteinersBoxs = document.querySelectorAll(".box");
     let conteinerInfo = obj.childNodes[3]; 
