@@ -228,16 +228,25 @@ body {
   .i-youtube {
     width: 25px;
     height: 20px;
+    &:hover {
+      content: url("../MEDIA/icons/youtube-H.png");
+    }
   }
 
   .i-facebook {
     width: 25px;
     height: 25px;
+    &:hover {
+      content: url("../MEDIA/icons/face-H.png");
+    }
   }
 
   .i-instagram {
     width: 22.5px;
     height: 22.5px;
+    &:hover {
+      content: url("../MEDIA/icons/instagram-H.png");
+    }
   }
 
   @media screen and (width <=1280px) {
