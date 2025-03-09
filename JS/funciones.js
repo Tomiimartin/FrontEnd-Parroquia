@@ -1,6 +1,5 @@
 import { form, inputTel, inputName, inputEmail, inputSubject, inputTextArea, botonSubmit, loader } from "./selectores.js";
 import { BACKEND_URL, STRAPI_URL } from "./urls.js";
-console.log(BACKEND_URL, STRAPI_URL);
 
 export function validarTel() {
     if (inputTel.value.length < 10) {

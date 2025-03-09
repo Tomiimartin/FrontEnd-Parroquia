@@ -20,8 +20,10 @@ function scrollTop() {
     });
 }
 
+console.log("animaciones carga");
 // funcion/animacion para box de donaciones
 function activarInfo(obj) {
+    
     let conteinersBoxs = document.querySelectorAll(".box");
     let conteinerInfo = obj.childNodes[3]; 
     let info = conteinerInfo.childNodes[1];
