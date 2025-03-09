@@ -135,6 +135,30 @@ body {
   }
 }
 
+.i-youtube {
+  width: 25px;
+  height: 20px;
+  &:hover {
+    content: url("../MEDIA/icons/youtube-H.png");
+  }
+}
+
+.i-facebook {
+  width: 25px;
+  height: 25px;
+  &:hover {
+    content: url("../MEDIA/icons/face-H.png");
+  }
+}
+
+.i-instagram {
+  width: 22.5px;
+  height: 22.5px;
+  &:hover {
+    content: url("../MEDIA/icons/instagram-H.png");
+  }
+}
+
 .Enviar {
   padding: 10px 30px;
   background-color: var(--Secundary-Claro);
@@ -224,30 +248,6 @@ body {
   justify-content: end;
   gap: 16px;
   min-width: 250px;
-
-  .i-youtube {
-    width: 25px;
-    height: 20px;
-    &:hover {
-      content: url("../MEDIA/icons/youtube-H.png");
-    }
-  }
-
-  .i-facebook {
-    width: 25px;
-    height: 25px;
-    &:hover {
-      content: url("../MEDIA/icons/face-H.png");
-    }
-  }
-
-  .i-instagram {
-    width: 22.5px;
-    height: 22.5px;
-    &:hover {
-      content: url("../MEDIA/icons/instagram-H.png");
-    }
-  }
 
   @media screen and (width <=1280px) {
     gap: 10px;
@@ -1838,7 +1838,6 @@ body {
 @keyframes tracking-in-expand {
   0% {
     letter-spacing: -0.5em;
-    opacity: 0;
   }
 
   40% {
@@ -1930,12 +1929,15 @@ body {
   flex-flow: row nowrap;
   gap: 2px;
   align-items: center;
+  opacity: 0;
+  animation: tracking-in-expand 0.5s .2s ease-out both;
 
   & .info-text {
     text-decoration: none;
     color: var(--Tinta-Negro);
     font-family: var(--Lato);
     font-size: 16px;
+    font-weight: 600;
 
     @media screen and (width <=360px) {
       font-size: 14px;

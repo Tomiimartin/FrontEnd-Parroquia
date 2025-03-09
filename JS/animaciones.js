@@ -60,7 +60,6 @@ function activarInfo(obj) {
     
     conteinersBoxs.forEach(box => {
         if (box.classList.contains("height-auto_mp") && !obj.classList.contains("height-auto_mp")) {
-            console.log("llego aca");
             box.classList.remove("height-auto_mp")
         }
     });
