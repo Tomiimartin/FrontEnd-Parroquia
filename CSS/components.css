@@ -754,7 +754,7 @@ body {
 /* articulos de nodevades */
 .container-section__novedades {
   margin: 40px 0;
-
+  scroll-margin-top: 110px;
   /* padre section, ocupa el 100% para que el hijo pueda centrase al tener un maximo de 1440px */
   display: flex;
   flex-direction: column;
@@ -771,6 +771,7 @@ body {
   /* breakpoint tablet-small and mobile */
   @media screen and (width <=640px) {
     gap: 24px;
+    scroll-margin-top: 90px;
   }
 }
 
@@ -1020,6 +1021,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 48px;
+  scroll-margin-top: 110px;
 
   width: 100%;
   padding: 40px 6%;
@@ -1033,6 +1035,7 @@ body {
   /* breakpoint tablet-small and mobile */
   @media screen and (width <=640px) and (width > 360px) {
     padding: 36px 6.57%;
+    scroll-margin-top: 90px;
   }
 
   /* breakpoint mobile-small */
@@ -1168,6 +1171,7 @@ body {
 
 /* Box de pagos para Donaciones */
 .cbp {
+  scroll-margin-top: 110px;
   min-height: 600px;
   max-height: 800px;
   position: relative;
@@ -1192,6 +1196,7 @@ body {
 
   /* breakpoint tablet-small and mobile */
   @media screen and (width <=640px) and (width > 360px) {
+    scroll-margin-top: 90px;
     min-height: 0;
     max-height: none;
     padding: 36px 0;
@@ -1700,6 +1705,7 @@ body {
   align-items: center;
   padding: 36px 6%;
   gap: 48px;
+  scroll-margin-top: 110px;
 
   & .tittle-contacto {
     align-self: self-start;
@@ -1713,6 +1719,7 @@ body {
   /* breakpoint mobile-small */
   @media screen and (width <=640px) {
     padding: 36px 6.57%;
+    scroll-margin-top: 90px;
 
     & .tittle-contacto {
       align-self: self-start;
