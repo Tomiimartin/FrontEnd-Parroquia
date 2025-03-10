@@ -818,7 +818,6 @@ body {
 
   /* medidas la imagen y el contenedor de texto */
   & img {
-    width: 100%;
     height: auto;
     max-height: 244px;
     align-self: stretch;
