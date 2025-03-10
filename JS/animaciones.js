@@ -229,14 +229,16 @@ function obtenerDistanciaDesdeTop(elemento) {
 const siderbar = document.querySelector(".siderBar");
 const BTNsiderbarOpen = document.querySelector(".arrow-left");
 const BTNsiderbarClose = document.querySelector(".arrow-siderBar-Close");
+console.log(siderbar, BTNsiderbarOpen, BTNsiderbarClose);
 
-function displaySiderOpen() {
+window.displaySiderOpen = function() {
+    
     BTNsiderbarOpen.classList.add("opacity-0");
     BTNsiderbarClose.classList.remove("opacity-0");
     siderbar.classList.add("width");    
 }
 
-function displaySiderClose() {
+window.displaySiderClose = function() {
     BTNsiderbarClose.classList.add("opacity-0");
     siderbar.classList.remove("width");    
     setTimeout(() => {

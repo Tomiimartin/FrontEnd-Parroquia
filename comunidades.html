@@ -19,7 +19,6 @@
         <link rel="stylesheet" href="./CSS/estilos-Locales.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" href="./MEDIA/animations/animation2.json" as="script" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet">
@@ -27,7 +26,6 @@
             crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/6390f99ab9.js"
             crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
 
     </head>
     <body>
@@ -38,20 +36,10 @@
                     Te agradezemos la paciencia, dentro de poco podras ver
                     nuestas Web
                 </p>
-                <div id="lottie-container"></div>
+                <dotlottie-player src="https://lottie.host/16de16e5-0d6e-4856-a5d3-2f9c879da5f4/mikWH8NuuH.lottie" background="transparent" speed="1" loop autoplay></dotlottie-player>
                 <a href="index.html" class="btn toIndex">Pagina Principal</a>
             </div>
         </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              var animation = lottie.loadAnimation({
-                container: document.getElementById("lottie-container"), 
-                renderer: "svg",
-                loop: true,
-                autoplay: true,
-                path: "./MEDIA/animations/animation2.json"
-              });
-            });
-        </script>
+        <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     </body>
 </html>
