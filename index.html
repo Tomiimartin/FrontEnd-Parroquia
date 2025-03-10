@@ -40,7 +40,7 @@
         <div class="conteiner-siderBar">
             <div class="arrow-siderBar-Close" style="display: none;" onclick="displaySiderClose()"></div>
             <div class="conteiner-buttom">
-                <a class="enlace-siderbar enlace-donar" onclick="displaySiderClose()">Donar</a>
+                <a class="enlace-siderbar enlace-donar" href="#section-donaciones" onclick="displaySiderClose()">Donar</a>
                 <a href="calendario.html" class="enlace-siderbar">Calendario</a>
                 <a href="noticias.html" class="enlace-siderbar MW170">Novedades</a>
                 <a href="comunidades.html" class="enlace-siderbar">Comunidades</a>
@@ -142,8 +142,8 @@
             </div>
             <h2 class=" tittle-donaciones__tablet tittle-sections" style="display: none;">Tu aporte nos sostiene</h2>
             <div class="container-box">
-                <div class="box tranferencia" onclick="activarInfo(this)">
-                    <div class="conteiner-rowTop">
+                <div class="box tranferencia">
+                    <div class="conteiner-rowTop" onclick="activarInfo(this.parentNode)">
                         <div class="content-icons-text"><i class="fa-solid fa-landmark"></i>
                             <p>Transferencia Bancaria</p>
                         </div>
@@ -159,8 +159,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="box tarjeta" onclick="activarInfo(this)">
-                    <div class="conteiner-rowTop">
+                <div class="box tarjeta">
+                    <div class="conteiner-rowTop" onclick="activarInfo(this.parentNode)">
                         <div class="content-icons-text"><i class="fa-solid fa-credit-card"></i>
                             <p>Pago con Tarjeta</p>
                         </div>
@@ -173,8 +173,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="box mp" onclick="activarInfo(this)">
-                    <div class="conteiner-rowTop">
+                <div class="box mp">
+                    <div class="conteiner-rowTop" onclick="activarInfo(this.parentNode)">
                         <div class="content-icons-text"><i class="fa-solid fa-qrcode qr"></i>
                             <p>QR-Mercado pago</p>
                         </div>
@@ -184,8 +184,8 @@
                         <img class="info-box info-mp" src="./MEDIA/PHOTOS/QR.png"></img>
                     </div>
                 </div>
-                <div class="box presencial" onclick="activarInfo(this)">
-                    <div class="conteiner-rowTop">
+                <div class="box presencial">
+                    <div class="conteiner-rowTop" onclick="activarInfo(this.parentNode)">
                         <div class="content-icons-text"><i class="fa-solid fa-church" style="color: #000000;"></i>
                             <p>Donaciones Presenciales</p>
                         </div>

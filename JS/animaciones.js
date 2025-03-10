@@ -13,7 +13,7 @@ window.scrollArrowDown = function() {
 }
 
 // funcion para llevar el scroll hasta el inicio(se agrega al logo);
-function scrollTop() {
+window.scrollTop =  function() {
     window.scrollTo({
         top: 0, // Desplazarse 100px hacia abajo
         behavior: 'smooth' // Hacer que el desplazamiento sea suave
@@ -226,19 +226,23 @@ function obtenerDistanciaDesdeTop(elemento) {
 }
 
 // Animacion para dar display al SiderBar, al tocar el btn del top
-const siderbar = document.querySelector(".siderBar");
-const BTNsiderbarOpen = document.querySelector(".arrow-left");
-const BTNsiderbarClose = document.querySelector(".arrow-siderBar-Close");
-console.log(siderbar, BTNsiderbarOpen, BTNsiderbarClose);
+
 
 window.displaySiderOpen = function() {
-    
+    const siderbar = document.querySelector(".siderBar");
+    const BTNsiderbarOpen = document.querySelector(".arrow-left");
+    const BTNsiderbarClose = document.querySelector(".arrow-siderBar-Close");
+
     BTNsiderbarOpen.classList.add("opacity-0");
     BTNsiderbarClose.classList.remove("opacity-0");
     siderbar.classList.add("width");    
 }
 
 window.displaySiderClose = function() {
+    const siderbar = document.querySelector(".siderBar");
+    const BTNsiderbarOpen = document.querySelector(".arrow-left");
+    const BTNsiderbarClose = document.querySelector(".arrow-siderBar-Close");
+
     BTNsiderbarClose.classList.add("opacity-0");
     siderbar.classList.remove("width");    
     setTimeout(() => {
@@ -255,6 +259,7 @@ function quitarWidth() {
     };
 }
 
+const siderbar = document.querySelector(".siderBar");
 siderbar?.addEventListener("click", (e=>{
     if(e.target.classList.contains("color-fondo")){
         displaySiderClose();

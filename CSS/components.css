@@ -818,6 +818,7 @@ body {
 
   /* medidas la imagen y el contenedor de texto */
   & img {
+    width: 100%;
     height: auto;
     max-height: 244px;
     align-self: stretch;
@@ -1384,7 +1385,6 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   padding: 12px 34px;
-  user-select: none;
   height: auto;
   transition: height 0.3s;
   interpolate-size: allow-keywords;
@@ -1432,6 +1432,7 @@ body {
   justify-content: space-between;
   height: 20px;
   cursor: pointer;
+  user-select: none;
 }
 
 .content-icons-text {
