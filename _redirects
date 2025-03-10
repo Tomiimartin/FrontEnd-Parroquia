@@ -1,5 +1,5 @@
-# Manejo de new.html con parámetros de ID
-/new.html?id=* /new.html 200
+# Manejar new.html con parámetros ID
+/new.html?id=* /new.html 200!
 
 # Fallback para otras rutas
 /* /index.html 200
