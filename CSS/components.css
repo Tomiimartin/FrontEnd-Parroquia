@@ -242,16 +242,16 @@ body {
   }
 }
 
-.i-youtube:hover{
-color: #942406 !important;
+*:has(> .i-youtube):hover .i-youtube {
+  color: #942406 !important;
 }
 
-.i-facebook:hover{
-color: #3B5998 !important;
+*:has(> .i-facebook):hover .i-facebook{
+  color: #3B5998 !important;
 }
 
-.i-instagram:hover{
-color: black !important;
+*:has(> .i-instagram):hover .i-instagram {
+  color: #000 !important;
 }
 
 
