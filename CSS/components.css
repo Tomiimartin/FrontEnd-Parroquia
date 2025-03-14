@@ -135,30 +135,6 @@ body {
   }
 }
 
-.i-youtube {
-  width: 25px;
-  height: 20px;
-  &:hover {
-    content: url("../MEDIA/icons/youtube-H.png");
-  }
-}
-
-.i-facebook {
-  width: 25px;
-  height: 25px;
-  &:hover {
-    content: url("../MEDIA/icons/face-H.png");
-  }
-}
-
-.i-instagram {
-  width: 22.5px;
-  height: 22.5px;
-  &:hover {
-    content: url("../MEDIA/icons/instagram-H.png");
-  }
-}
-
 .Enviar {
   padding: 10px 30px;
   background-color: var(--Secundary-Claro);
@@ -249,30 +225,35 @@ body {
   gap: 16px;
   min-width: 250px;
 
-  @media screen and (width <=1280px) {
+  @media screen and (width <= 1280px) {
     gap: 10px;
     min-width: 0;
-
-    .i-youtube {
-      width: 20px;
-      height: 16px;
-    }
-
-    .i-facebook {
-      width: 20px;
-      height: 20px;
-    }
-
-    .i-instagram {
-      width: 18.5px;
-      height: 18.5px;
-    }
   }
-
   @media screen and (width <=780px) {
     display: none;
   }
 }
+
+.i-youtube,.i-facebook,.i-instagram {
+  font-size: 24px;
+  transition: color .5s ease;
+  @media screen and (width <= 1280px) {
+    font-size: 20px;
+  }
+}
+
+.i-youtube:hover{
+color: #942406 !important;
+}
+
+.i-facebook:hover{
+color: #3B5998 !important;
+}
+
+.i-instagram:hover{
+color: black !important;
+}
+
 
 /* Top del Hero */
 .top--hero {
