@@ -1,11 +1,11 @@
 console.log("js conectado");
 
 // Funcion para scroll del button arrow-down del hero
-window.scrollArrowDown = function() {
+window.scrollArrowDown = function () {
     const sectionNovedades = document.querySelector(".container-section__novedades");
     let largoNav = document.querySelector(".top--hero").offsetHeight;
     let disntacia = sectionNovedades.getBoundingClientRect().top - 36;
-    disntacia -= largoNav; 
+    disntacia -= largoNav;
     window.scrollBy({
         top: disntacia, // Desplazarse 100px hacia abajo
         behavior: 'smooth' // Hacer que el desplazamiento sea suave
@@ -13,7 +13,7 @@ window.scrollArrowDown = function() {
 }
 
 // funcion para llevar el scroll hasta el inicio(se agrega al logo);
-window.scrollTop =  function() {
+window.scrollTop = function () {
     window.scrollTo({
         top: 0, // Desplazarse 100px hacia abajo
         behavior: 'smooth' // Hacer que el desplazamiento sea suave
@@ -21,10 +21,10 @@ window.scrollTop =  function() {
 }
 
 // funcion/animacion para box de donaciones
-window.activarInfo =  function(obj) {
-    
+window.activarInfo = function (obj) {
+
     let conteinersBoxs = document.querySelectorAll(".box");
-    let conteinerInfo = obj.childNodes[3]; 
+    let conteinerInfo = obj.childNodes[3];
     let info = conteinerInfo.childNodes[1];
     let infos = document.querySelectorAll(".info-box");
     let arrow = conteinerInfo.previousElementSibling.childNodes[3];
@@ -44,11 +44,11 @@ window.activarInfo =  function(obj) {
             i.classList.remove("display-A");
         }
     })
-    
+
     // alterno class al container-info y el tipo de display a la info
     conteinerInfo.classList.toggle("info-visibility");
     info.classList.toggle("display-A");
-    
+
     // alterno class al arrow
     arrow.classList.toggle("arrow-box__click");
 
@@ -58,7 +58,7 @@ window.activarInfo =  function(obj) {
             box.classList.remove("height-auto")
         }
     });
-    
+
     conteinersBoxs.forEach(box => {
         if (box.classList.contains("height-auto_mp") && !obj.classList.contains("height-auto_mp")) {
             box.classList.remove("height-auto_mp")
@@ -68,7 +68,7 @@ window.activarInfo =  function(obj) {
     // alterno la class para dar animacion al heigth
     if (obj.classList.contains("mp")) {
         obj.classList.toggle("height-auto_mp")
-    }else {
+    } else {
         obj.classList.toggle("height-auto");
     }
 }
@@ -100,49 +100,49 @@ function checkScreenSize(textoLogo) {
 // Animacion para nav-scroll top
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('.top--hero');
-    const navNovedades = document.querySelector('.top-novedades');
+    const navStill = document.querySelector('.nav--hero');
+    const navNovedades = document.querySelector('.top-novedades'); /* para pagina de novedades y new */
     const textoLogo = nav.childNodes[1].childNodes[1].childNodes[3];
     const divScroll = nav.childNodes[1].childNodes[3];
     const img = nav.childNodes[1].childNodes[1].childNodes[1];
     const textScrollMobile = document.querySelector(".text-scroll__mobile");
     const textScrollMobileSmall = document.querySelector(".text-scroll__mobile-small");
     
-    if (window.scrollY >= 50) {
-        // agregar o eliminar propiedades al div conteiner del nav-scrol
+    const scrollActual = window.scrollY;
+    const positionNavStill = navStill.offsetTop;
+    const heightNavStill = navStill.offsetHeight;
+
+    if (scrollActual >= (positionNavStill - 30)) {
+        // Agregar clase si el scroll está entre 480px y antes del elementoReferencia
         if (!nav.classList.contains("top-novedades")) {
-            nav.classList.add('nav--scroll'); 
+            nav.classList.add('nav--scroll');
         }
-        
-        // elimar el texto del logo
+
         if (!textoLogo.classList.contains("text-logo-novedades")) {
             checkScreenSize(textoLogo);
         }
-        
-        // elimar el texto del logo
+
         divScroll.removeAttribute("style");
-        
-        // agregar funcion Onclick a img
         img.addEventListener("click", scrollTop);
-        img.classList.add("pointer")
-        
-        // oculto o muestro el text del nav
+        img.classList.add("pointer");
         textScrollMobile?.classList.add("visible");
         textScrollMobileSmall?.classList.add("visible");
+    } 
+    else if (scrollActual < (positionNavStill - 30)) {
+        nav.classList.remove('nav--scroll');
+        textScrollMobile?.classList.remove("visible");
+        textScrollMobileSmall?.classList.remove("visible");
+        if (!divScroll.classList.contains("info--novedades")) {
+            divScroll.style.display = "none";
+        }
+        img.classList.remove("pointer");
+        textoLogo.removeAttribute("style");
     } 
     else if (window.scrollY > 1) {
         if (navNovedades) {
             navNovedades.classList.add('nav--scroll');
         }
-    } else {
-        nav.classList.remove('nav--scroll');
-        textoLogo.removeAttribute("style");
-        if (!divScroll.classList.contains("info--novedades")) {
-            divScroll.style.display = "none";
-        }
-        img.classList.remove("pointer")
-        textScrollMobile?.classList.remove("visible");
-        textScrollMobileSmall?.classList.remove("visible");
-    }
+    } 
 });
 
 window.addEventListener("resize", () => {
@@ -153,7 +153,7 @@ window.addEventListener("resize", () => {
     if (window.scrollY >= 300) {
         if (!textoLogo.classList.contains("text-logo-novedades")) {
             checkScreenSize(textoLogo);
-        }       
+        }
     }
     quitarWidth();
 });
@@ -228,23 +228,23 @@ function obtenerDistanciaDesdeTop(elemento) {
 // Animacion para dar display al SiderBar, al tocar el btn del top
 
 
-window.displaySiderOpen = function() {
+window.displaySiderOpen = function () {
     const siderbar = document.querySelector(".siderBar");
     const BTNsiderbarOpen = document.querySelector(".arrow-left");
     const BTNsiderbarClose = document.querySelector(".arrow-siderBar-Close");
 
     BTNsiderbarOpen.classList.add("opacity-0");
     BTNsiderbarClose.classList.remove("opacity-0");
-    siderbar.classList.add("width");    
+    siderbar.classList.add("width");
 }
 
-window.displaySiderClose = function() {
+window.displaySiderClose = function () {
     const siderbar = document.querySelector(".siderBar");
     const BTNsiderbarOpen = document.querySelector(".arrow-left");
     const BTNsiderbarClose = document.querySelector(".arrow-siderBar-Close");
 
     BTNsiderbarClose.classList.add("opacity-0");
-    siderbar.classList.remove("width");    
+    siderbar.classList.remove("width");
     setTimeout(() => {
         BTNsiderbarOpen.classList.remove("opacity-0");
     }, 200);
@@ -254,14 +254,14 @@ function quitarWidth() {
     const siderbar = document.querySelector(".siderBar");
     const arrow = document.querySelector(".arrow-left");
     if (window.innerWidth >= 780) {
-        siderbar?.classList.remove("width"); 
-        arrow?.classList.remove("opacity-0"); 
+        siderbar?.classList.remove("width");
+        arrow?.classList.remove("opacity-0");
     };
 }
 
 const siderbar = document.querySelector(".siderBar");
-siderbar?.addEventListener("click", (e=>{
-    if(e.target.classList.contains("color-fondo")){
+siderbar?.addEventListener("click", (e => {
+    if (e.target.classList.contains("color-fondo")) {
         displaySiderClose();
     };
 }))

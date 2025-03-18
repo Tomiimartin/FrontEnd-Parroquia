@@ -35,6 +35,7 @@ body {
   align-items: center;
   margin: 0;
   text-decoration: none;
+  transition: background-color ease .4s;
 
   color: var(--Tinta-Negro);
   font-family: var(--Lato);
@@ -1921,6 +1922,7 @@ body {
   align-items: center;
   opacity: 0;
   animation: tracking-in-expand 0.5s .2s ease-out both;
+  user-select: text;
 
   & .info-text {
     text-decoration: none;
@@ -2038,6 +2040,7 @@ form {
     color: #000;
     background-color: var(--Secundary-Saturado);
     box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.4);
+    transition: background-color ease .3s;
 
     @media screen and (width <=640px) {
       padding: 8px 20px !important;
@@ -2219,20 +2222,30 @@ textarea {
   align-items: start;
   row-gap: 12px;
   padding-right: 10%;
-
+  
   & ul {
     width: 100%;
   }
-
+  
   @media screen and (width <=640px) {
     padding-right: 0px;
     padding-top: 20px;
+    
+    & ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        padding: 0 4%;
+      }
+  }
 
+  @media screen and (width <= 490px) {
     & ul {
       display: grid;
       grid-template-rows: repeat(2, 1fr);
       column-gap: 10px;
       justify-content: center;
+      padding: 0 0;
 
       .li:nth-child(1) {
         grid-row: 1;
@@ -2299,42 +2312,45 @@ h5 {
   align-items: center;
   justify-content: flex-start;
 
-  & i {
-    padding: 0 1px;
-  }
-
-  & img {
-    width: 20px;
-    height: auto;
-  }
-
   & a {
     color: #000;
     font-family: var(--Lato);
-    font-size: clamp(18px, 1.3vw, 20px);
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+    & i {
+      padding: 0 1px;
+      font-size: 24px;
+      transition: color .5s ease;
+      max-width: 24px;
+    }
+    
+    & i::before {
+      max-width: 24px;
+    }
   }
-
+  
   @media screen and (width <=1280px) {
     min-width: 140px;
-
-    & .fa-lg {
-      font-size: 18px;
-    }
-
-    & img {
-      width: 18px;
-      height: auto;
-    }
-
+    
     & a {
       font-size: 16px;
       min-width: 0;
+      gap: 6px;
+
+      & i {
+        font-size: 20px;
+        max-width: 22px;
+      }
+      
     }
   }
-
+  
   @media screen and (width <=640px) {
     padding-left: 0;
+    min-width: 0px;
 
     & a {
       font-size: 14px;
@@ -2345,20 +2361,13 @@ h5 {
 .li-C {
   justify-content: flex-end;
 
-  & a {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-  }
-
-  @media screen and (width <=640px) {
+  @media screen and (width <= 640px) {
     justify-content: center;
-
-    & a img {
-      order: -1;
-      list-style-type: none;
-    }
   }
+}
+
+*:has(> .fa-solid):hover .fa-solid {
+  color: black !important;
 }
 
 .content-copy {
@@ -2835,5 +2844,4 @@ h5 {
         font-size: 3.4vw;
       }
     }
-  }
-}
+}}
