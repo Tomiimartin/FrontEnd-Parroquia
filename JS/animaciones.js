@@ -109,8 +109,8 @@ window.addEventListener('scroll', () => {
     const textScrollMobileSmall = document.querySelector(".text-scroll__mobile-small");
     
     const scrollActual = window.scrollY;
-    const positionNavStill = navStill.offsetTop;
-    const heightNavStill = navStill.offsetHeight;
+    const positionNavStill = navStill?.offsetTop;
+    const heightNavStill = navStill?.offsetHeight;
 
     if (scrollActual >= (positionNavStill - 30)) {
         // Agregar clase si el scroll está entre 480px y antes del elementoReferencia
@@ -143,6 +143,11 @@ window.addEventListener('scroll', () => {
             navNovedades.classList.add('nav--scroll');
         }
     } 
+    if (window.scrollY === 0) {
+        if (navNovedades) {
+            navNovedades.classList.remove('nav--scroll');
+        }
+    }
 });
 
 window.addEventListener("resize", () => {
