@@ -83,7 +83,7 @@ export async function validarForm(e) {
 }
 
 export async function llamadoNewsCMS() {
-    const url = `${STRAPI_URL}news?populate=imagen`;
+    const url = `${STRAPI_URL}news?fields[0]=fecha&fields[1]=informacion&fields[2]=titulo&fields[3]=documentId&populate[imagen][fields][0]=url&populate[imagen][fields][1]=name`;
     try {
         const res = await fetch(url);
         const data = await res.json();
@@ -100,7 +100,7 @@ export async function llamadoNewsCMS() {
 }
 
 export async function llamadoHourCMS() {
-    const url = `${STRAPI_URL}hours?populate=imagen`;
+    const url = `${STRAPI_URL}hours?fields[0]=info&fields[1]=tittle&populate[imagen][fields][0]=name&populate[imagen][fields][1]=url`;
     try {
         const res = await fetch(url);
         const data = await res.json();
@@ -119,7 +119,7 @@ export async function llamadoNew() {
     }
 
     try {
-        const response = await fetch(`${STRAPI_URL}news/${Id}?populate=imagen`);
+        const response = await fetch(`${STRAPI_URL}news/${Id}?fields[0]=fecha&fields[1]=informacion&fields[2]=titulo&fields[3]=documentId&populate[imagen][fields][0]=url&populate[imagen][fields][1]=name`);
         const data = await response.json();
         crearNew(data.data)
     } catch (error) {
@@ -131,7 +131,7 @@ function crearNews(array) {
     const contenedprNew = document.querySelector(".content-art__novedades");
 
     array.forEach(e => {
-        const { fecha, documentId, imagen: { formats, url, name }, informacion, titulo } = e;
+        const { fecha, documentId, imagen: { url, name }, informacion, titulo } = e;
         // creo la new
         let article = document.createElement("article");
         article.classList.add("art-novedades");
@@ -182,7 +182,7 @@ function crearNews(array) {
 function crearCardHour(array) {
     const contenedorCards = document.querySelector(".content-art__horarios");
     array.forEach(e => {
-        const { imagen: { name, url }, id, info, tittle } = e;
+        const { imagen: { name, url }, info, tittle } = e;
 
         // Crear el elemento article principal
         const article = document.createElement('article');
