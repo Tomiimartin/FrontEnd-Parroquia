@@ -9,7 +9,7 @@
     "parcel": "^2.13.3"
   },
   "scripts": {
-    "start": "parcel index.html --open",
+    "start": "parcel serve index.html --open",
     "build": "rmdir /s /q dist 2>nul || true && parcel build index.html noticias.html new.html comunidades.html calendario.html JS/animaciones.js --public-url ./",
     "postbuild": "[ -f _redirects ] && cp _redirects dist/ || copy _redirects dist\\"
   },

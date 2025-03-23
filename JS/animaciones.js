@@ -25,7 +25,7 @@ window.activarInfo = function (obj) {
 
     let conteinersBoxs = document.querySelectorAll(".box");
     let conteinerInfo = obj.childNodes[3];
-    let info = conteinerInfo.childNodes[1];
+    let info = conteinerInfo.childNodes[1];    
     let infos = document.querySelectorAll(".info-box");
     let arrow = conteinerInfo.previousElementSibling.childNodes[3];
     let containersInfo = document.querySelectorAll("#container-info");
