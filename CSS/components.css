@@ -90,9 +90,9 @@ body {
 }
 
 .btn-principal {
-  @media screen and (width <=640px) {
-    padding: 8px 26px;
-    font-size: 16px;
+  @media screen and (width <= 640px) {
+    padding: 8px 22px;
+    font-size: 14px;
   }
 }
 
@@ -133,6 +133,11 @@ body {
 
   &:hover {
     background-color: #ff6969;
+  }
+
+  @media screen and (width <=640px) {
+    padding: 8px 20px;
+    font-size: 12px;
   }
 }
 
@@ -1942,6 +1947,7 @@ body {
     width: 100%;
     text-transform: uppercase;
     text-shadow: 1px 1px 0.8px #00000034;
+    padding: 0 4px;
 
     @media screen and (width <=640px) {
       font-size: clamp(16px, 3vw, 18px);
