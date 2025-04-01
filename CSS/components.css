@@ -2848,6 +2848,10 @@ h5 {
     & h4,h3 {
       font-size: clamp(24px, 2.1vw, 28px);
     }
+    & img{
+      width: 60%;
+      height: auto;
+    }
   }
 
   @media screen and (width <=1280px) {
