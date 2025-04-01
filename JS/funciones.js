@@ -245,7 +245,7 @@ function crearNew(data) {
 
     const informacionNew = document.createElement('p');
     informacionNew.className = 'informacion-new';
-    informacionNew.innerHTML = marked.parse(informacion);
+    informacionNew.textContent = marked.parse(informacion);
 
     const button = document.createElement("a");
     button.classList.add("btn","VerMasN","btn-principal");

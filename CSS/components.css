@@ -1078,7 +1078,7 @@ body {
   background-color: rgb(223, 206, 57, 0.24);
   max-width: 704px;
   min-width: 215px;
-  padding: 28px 28px;
+  padding: 28px 18px;
   border-radius: 12px;
   box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.35);
 
@@ -1092,7 +1092,7 @@ body {
 
   h3 {
     color: var(--Complementos-Azul);
-    font-size: var(--sizeH3);
+    font-size: 22px;
     font-family: var(--Lato);
     text-align: center;
     width: 100%;
@@ -1108,7 +1108,7 @@ body {
 
   /* breakpoint tablet */
   @media screen and (width <= 1280px) and (width > 640px) {
-    padding: 24px 24px;
+    padding: 24px 16px;
     gap: 10px;
     flex-shrink: 0;
     flex-grow: 1;
