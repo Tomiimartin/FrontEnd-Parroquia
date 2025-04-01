@@ -130,6 +130,8 @@ export async function llamadoNew() {
 function crearNews(array) {
     const contenedprNew = document.querySelector(".content-art__novedades");
 
+    console.log(array);
+    
     array.forEach(e => {
         const { fecha, documentId, imagen: { url, name }, informacion, titulo } = e;
         // creo la new
