@@ -1073,12 +1073,12 @@ body {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 
   background-color: rgb(223, 206, 57, 0.24);
   max-width: 704px;
   min-width: 215px;
-  padding: 28px 18px;
+  padding: 28px 14px;
   border-radius: 12px;
   box-shadow: 2px 2px 6px -2px rgba(0, 0, 0, 0.35);
 
@@ -1092,15 +1092,15 @@ body {
 
   h3 {
     color: var(--Complementos-Azul);
-    font-size: 22px;
+    font-size: 18px;
     font-family: var(--Lato);
     text-align: center;
     width: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   p {
-    font-size: var(--sizeText);
+    font-size: 14px;
     font-family: var(--Lato);
     text-align: center;
     width: 100%;
@@ -1116,10 +1116,6 @@ body {
 
     img {
       max-width: min-content;
-    }
-
-    h3 {
-      font-size: 20px;
     }
   }
 
