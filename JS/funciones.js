@@ -159,7 +159,7 @@ function crearNews(array) {
         pResumen.classList.add("resumen");
         let informacionRender = marked.parse(informacion);
         let filterInfo = limpiarImagenes(informacionRender)
-        pResumen.textContent = filterInfo;
+        pResumen.innerHTML = filterInfo;
 
         let enlace = document.createElement("a");
         enlace.href = `new.html?id=${documentId}`;
