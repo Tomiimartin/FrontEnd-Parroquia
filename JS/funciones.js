@@ -130,9 +130,15 @@ export async function llamadoNew() {
 function crearNews(array) {
     const contenedprNew = document.querySelector(".content-art__novedades");
 
-    console.log(array);
+    const arrayOrder = [...array].sort((a,b) => {
+        let fechaA = a.fecha.split("/").reverse().join("-");
+        let fechaB = b.fecha.split("/").reverse().join("-");
+        return new Date(fechaA) - new Date(fechaB)
+    })
     
-    array.forEach(e => {
+    console.log(arrayOrder);
+    
+    arrayOrder.forEach(e => {
         const { fecha, documentId, imagen: { url, name }, informacion, titulo } = e;
         // creo la new
         let article = document.createElement("article");
@@ -313,3 +319,4 @@ function limpiarImagenes(htmlString) {
 
     return contenedor.innerHTML;
 }
+
