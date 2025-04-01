@@ -164,6 +164,7 @@ function crearNews(array) {
 
         pResumen.innerHTML = marked.parse(informacion);
 
+
         console.log(informacion);
         console.log(pResumen);
         
