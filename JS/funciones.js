@@ -133,11 +133,9 @@ function crearNews(array) {
     const arrayOrder = [...array].sort((a,b) => {
         let fechaA = a.fecha.split("/").reverse().join("-");
         let fechaB = b.fecha.split("/").reverse().join("-");
-        return new Date(fechaA) - new Date(fechaB)
+        return new Date(fechaB) - new Date(fechaA)
     })
-    
-    console.log(arrayOrder);
-    
+        
     arrayOrder.forEach(e => {
         const { fecha, documentId, imagen: { url, name }, informacion, titulo } = e;
         // creo la new
