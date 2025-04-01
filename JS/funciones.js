@@ -157,10 +157,9 @@ function crearNews(array) {
 
         let pResumen = document.createElement("p");
         pResumen.classList.add("resumen");
-
-        const informacionRender = marked.parse(informacion);
-        console.log(informacionRender);
-
+        let informacionRender = marked.parse(informacion);
+        let filterInfo = limpiarImagenes(informacionRender)
+        pResumen.textContent = filterInfo;
 
         let enlace = document.createElement("a");
         enlace.href = `new.html?id=${documentId}`;
@@ -302,4 +301,13 @@ function ErroNew() {
     contenedor.classList.add("errorNew");
     contenedor.appendChild(cont);
 
+}
+
+function limpiarImagenes(htmlString) {
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML = htmlString;
+
+    contenedor.querySelectorAll("img").forEach(img => img.remove());
+
+    return contenedor.innerHTML;
 }
