@@ -1,0 +1,1 @@
+GET https://cms-strapi-proyectoparroquia-production.up.railway.app/api/news
