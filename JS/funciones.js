@@ -157,9 +157,14 @@ function crearNews(array) {
 
         let pResumen = document.createElement("p");
         pResumen.classList.add("resumen");
+
+        const render = new marked.Renderer();
+        render.image = () => "";
+        marked.setOptions({ render });
+
         pResumen.innerHTML = marked.parse(informacion);
+
         console.log(informacion);
-        console.log(marked.parse(informacion));
         console.log(pResumen);
         
         
