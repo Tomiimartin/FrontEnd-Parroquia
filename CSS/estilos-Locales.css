@@ -141,6 +141,8 @@ h1 {
     text-align: center;
     & span {
         display: block;
+        margin-top: 4px;
+        font-size: clamp(36px, 3vw, 40px);
     }
 
     /* breakpoint tablet-small */

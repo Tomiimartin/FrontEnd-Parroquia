@@ -2169,7 +2169,7 @@ textarea {
   display: flex;
   flex-flow: row wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   max-width: 1440px;
 
   @media screen and (width <= 640px) {
