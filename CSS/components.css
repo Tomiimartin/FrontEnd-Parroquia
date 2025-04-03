@@ -776,14 +776,14 @@ body {
   }
 
   /* brakpoint tablet-samll and mobile */
-  @media screen and (width <=640px) and (width > 360px) {
-    margin: 0 6.57%;
+  @media screen and (width <= 640px) {
+    padding: 0 6.57%;
+    width: 100%;
   }
 
   /* brakpoint mobile-samll */
-  @media screen and (width <=360px) {
-    margin: 0 20px;
-    /* background-color: #000; */
+  @media screen and (width <= 360px) {
+    padding: 0 20px;
   }
 }
 
@@ -920,6 +920,7 @@ body {
     flex-flow: column nowrap;
     column-gap: 0px;
     row-gap: 6px;
+    width: 100%;
 
     img {
       min-width: 0px;
@@ -928,7 +929,7 @@ body {
     }
 
     .container-text {
-      min-height: 160px;
+      min-height: 190px;
       height: auto;
       width: 100%;
       gap: 6px;
@@ -968,6 +969,7 @@ body {
     column-gap: 0px;
     row-gap: 6px;
     height: auto;
+    width: 100%;
 
     img {
       min-width: 0px;
@@ -976,7 +978,7 @@ body {
     }
 
     .container-text {
-      min-width: 300px;
+      min-width: 0px;
       min-height: 160px;
       gap: 6px;
       padding: 12px 4px;
