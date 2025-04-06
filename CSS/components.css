@@ -231,7 +231,7 @@ body {
   gap: 16px;
   min-width: 250px;
 
-  @media screen and (width <= 1280px) {
+  @media screen and (width < 1280px) {
     gap: 10px;
     min-width: 0;
   }
