@@ -311,8 +311,8 @@ body {
 
     img {
       user-select: none;
-      width: 46px;
-      height: auto;
+      width: 48px;
+      height: 46px;
 
       /* breakpoint tablet */
       @media screen and (width <=1280px) {
@@ -328,7 +328,7 @@ body {
     p {
       max-width: 200px;
       font-family: var(--Lato);
-      font-size: clamp(16px, 1vw, 17px);
+      font-size: 16px;
       font-weight: 600;
       color: var(--Tinta-Gris);
       text-align: left;
