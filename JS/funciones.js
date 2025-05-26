@@ -62,9 +62,11 @@ export async function validarForm(e) {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(data)
         });
-
+        console.log(response);
+        
         if (!response.ok) {
             throw new Error(`Error en la petición: ${response.status} ${response.statusText}`);
+            return
         }
 
         const result = await response.json();
