@@ -90,7 +90,7 @@ body {
 }
 
 .btn-principal {
-  @media screen and (width <= 640px) {
+  @media screen and (width <=640px) {
     padding: 8px 22px;
     font-size: 14px;
   }
@@ -235,15 +235,19 @@ body {
     gap: 10px;
     min-width: 0;
   }
+
   @media screen and (width <=780px) {
     display: none;
   }
 }
 
-.i-youtube,.i-facebook,.i-instagram {
+.i-youtube,
+.i-facebook,
+.i-instagram {
   font-size: 24px;
   transition: color .5s ease;
-  @media screen and (width <= 1280px) {
+
+  @media screen and (width <=1280px) {
     font-size: 20px;
   }
 }
@@ -252,7 +256,7 @@ body {
   color: #942406 !important;
 }
 
-*:has(> .i-facebook):hover .i-facebook{
+*:has(> .i-facebook):hover .i-facebook {
   color: #3B5998 !important;
 }
 
@@ -340,7 +344,7 @@ body {
       }
 
       /* breakpoint tablet-small */
-      @media screen and (width <= 555px) {
+      @media screen and (width <=555px) {
         display: none;
       }
     }
@@ -776,13 +780,13 @@ body {
   }
 
   /* brakpoint tablet-samll and mobile */
-  @media screen and (width <= 640px) {
+  @media screen and (width <=640px) {
     padding: 0 6.57%;
     width: 100%;
   }
 
   /* brakpoint mobile-samll */
-  @media screen and (width <= 360px) {
+  @media screen and (width <=360px) {
     padding: 0 20px;
   }
 }
@@ -1031,7 +1035,7 @@ body {
     padding: 36px 6.57%;
     scroll-margin-top: 60px;
   }
-  
+
   /* breakpoint mobile-small */
   @media screen and (width <=360px) {
     padding: 36px 20px;
@@ -1114,7 +1118,7 @@ body {
   }
 
   /* breakpoint tablet */
-  @media screen and (width <= 1280px) and (width > 640px) {
+  @media screen and (width <=1280px) and (width > 640px) {
     padding: 24px 16px;
     gap: 10px;
     flex-shrink: 0;
@@ -1127,7 +1131,7 @@ body {
   }
 
   /* breakpoint tablet-small and mobile */
-  @media screen and (width <= 640px) and (width > 360px) {
+  @media screen and (width <=640px) and (width > 360px) {
     gap: 8px;
     padding: 10px 8px;
     min-width: 145px;
@@ -1146,7 +1150,7 @@ body {
   }
 
   /* breakpoint mobile-small */
-  @media screen and (width <= 360px) {
+  @media screen and (width <=360px) {
     min-width: 0px;
     padding: 10px 8px;
 
@@ -1194,7 +1198,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
   }
-  
+
   /* breakpoint mobile-small */
   @media screen and (width <=360px) {
     scroll-margin-top: 50px;
@@ -1408,7 +1412,7 @@ body {
   }
 
   /* breakpoint tablet-small and mobile */
-  @media screen and (width <= 640px) {
+  @media screen and (width <=640px) {
     min-width: 0px;
     padding: 8px 20px;
   }
@@ -1447,7 +1451,7 @@ body {
     height: 100%;
   }
 
-  @media screen and (width <= 640px) {
+  @media screen and (width <=640px) {
     font-size: 16px;
     height: 100%;
 
@@ -1570,9 +1574,11 @@ body {
   font-family: var(--Lato);
   font-size: clamp(14px, 1vw, 16px);
   margin-bottom: 4px;
-  & span{
+
+  & span {
     font-weight: 600;
   }
+
   @media screen and (width <=640px) {
     font-size: 14px;
   }
@@ -1589,7 +1595,7 @@ body {
   padding: 10px 36px 0 36px;
   width: 100%;
 
-  @media screen and (width <= 640px) {
+  @media screen and (width <=640px) {
     padding: 10px 8px 0;
   }
 }
@@ -1702,13 +1708,13 @@ body {
   @media screen and (width <=640px) {
     padding: 36px 6.57%;
     scroll-margin-top: 60px;
-    
+
     & .tittle-contacto {
       align-self: self-start;
       margin-left: -5%;
     }
   }
-  
+
   /* breakpoint mobile-small */
   @media screen and (width <=360px) {
     scroll-margin-top: 50px;
@@ -2124,7 +2130,7 @@ textarea {
 }
 
 /*                                      Section Comunidades                                                                        */
-.container-section__comunidades{
+.container-section__comunidades {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -2142,7 +2148,7 @@ textarea {
     padding: 36px 6.57%;
     scroll-margin-top: 60px;
   }
-  
+
   /* breakpoint mobile-small */
   @media screen and (width <=360px) {
     scroll-margin-top: 50px;
@@ -2150,23 +2156,25 @@ textarea {
   }
 }
 
-.content-titulos__comunidades{
+.content-titulos__comunidades {
   width: 100%;
   text-align: center;
-  & h2{
+
+  & h2 {
     margin-bottom: 8px;
   }
-  & p{
+
+  & p {
     font-family: var(--Lato);
     font-size: 20px;
-    
+
     @media screen and (width <=640px) {
       font-size: 18px;
     }
   }
 }
 
-.content-cards__comunidades{
+.content-cards__comunidades {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -2174,12 +2182,12 @@ textarea {
   justify-content: space-evenly;
   max-width: 1440px;
 
-  @media screen and (width <= 640px) {
+  @media screen and (width <=640px) {
     justify-content: center;
   }
 }
 
-.card-comunidades{
+.card-comunidades {
   background: #f5efef;
   display: flex;
   flex-flow: row nowrap;
@@ -2192,8 +2200,8 @@ textarea {
   border-radius: 6px;
   box-shadow: 1px 1px 3px #00000059;
   text-decoration: none;
-  
-  & .card-comunidades__texto{
+
+  & .card-comunidades__texto {
     display: flex;
     flex-flow: column nowrap;
     gap: 12px;
@@ -2201,16 +2209,16 @@ textarea {
     font-family: var(--Lato);
     font-size: 18px;
   }
-  
-  @media screen and (width <= 1280px) {
+
+  @media screen and (width <=1280px) {
     max-width: 250px;
   }
 
-  @media screen and (width <= 1000px) {
+  @media screen and (width <=1000px) {
     max-width: 248px;
   }
 
-  @media screen and (width <= 694px) {
+  @media screen and (width <=694px) {
     max-width: none;
   }
 
@@ -2253,7 +2261,7 @@ textarea {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  padding: 36px ;
+  padding: 36px;
 
   & .content-logo-info {
     width: 100%;
@@ -2279,7 +2287,8 @@ textarea {
   }
 
   @media screen and (width <=1280px) {
-    padding: 36px ;
+    padding: 36px;
+
     & .content-logo-info {
       & img {
         width: 88px;
@@ -2293,7 +2302,8 @@ textarea {
   }
 
   @media screen and (width <=640px) {
-    padding: 24px ;
+    padding: 24px;
+
     & .content-logo-info {
       & img {
         width: 68px;
@@ -2314,24 +2324,24 @@ textarea {
   align-items: start;
   row-gap: 12px;
   padding-right: 10%;
-  
+
   & ul {
     width: 100%;
   }
-  
+
   @media screen and (width <=640px) {
     padding-right: 0px;
     padding-top: 20px;
-    
+
     & ul {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        padding: 0 4%;
-      }
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      padding: 0 4%;
+    }
   }
 
-  @media screen and (width <= 490px) {
+  @media screen and (width <=490px) {
     & ul {
       display: grid;
       grid-template-rows: repeat(2, 1fr);
@@ -2411,22 +2421,22 @@ h5 {
     display: flex;
     align-items: center;
     gap: 8px;
-    
+
     & i {
       padding: 0 1px;
       font-size: 24px;
       transition: color .5s ease;
       max-width: 24px;
     }
-    
+
     & i::before {
       max-width: 24px;
     }
   }
-  
+
   @media screen and (width <=1280px) {
     min-width: 140px;
-    
+
     & a {
       font-size: 16px;
       min-width: 0;
@@ -2436,10 +2446,10 @@ h5 {
         font-size: 20px;
         max-width: 22px;
       }
-      
+
     }
   }
-  
+
   @media screen and (width <=640px) {
     padding-left: 0;
     min-width: 0px;
@@ -2453,7 +2463,7 @@ h5 {
 .li-C {
   justify-content: flex-end;
 
-  @media screen and (width <= 640px) {
+  @media screen and (width <=640px) {
     justify-content: center;
   }
 }
@@ -2552,7 +2562,8 @@ h5 {
     & a img {
       width: 22px;
       height: auto;
-      @media screen and (width <= 425px){
+
+      @media screen and (width <=425px) {
         width: 20px;
       }
     }
@@ -2566,7 +2577,7 @@ h5 {
     font-weight: bold;
     text-align: center;
 
-    @media screen and (width <= 425px) {
+    @media screen and (width <=425px) {
       font-size: 12px;
     }
   }
@@ -2852,10 +2863,13 @@ h5 {
     overflow-wrap: break-word;
     line-height: 1.2;
     white-space: pre-wrap;
-    & h4,h3 {
+
+    & h4,
+    h3 {
       font-size: clamp(24px, 2.1vw, 28px);
     }
-    & img{
+
+    & img {
       width: 65%;
       height: auto;
     }
@@ -2894,50 +2908,93 @@ h5 {
     background-color: rgba(173, 155, 155, 0.144);
     backdrop-filter: blur(5px);
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.103);
-    
+
     & h3 {
       font-size: 2.5vw;
       text-align: center;
       font-family: var(--Mont);
       color: var(--Primary-Claro);
       margin-bottom: 2vh;
-  
+
       @media screen and (width <=1080px) {
         font-size: 3.5vw;
       }
-  
+
       @media screen and (width <=840px) {
         font-size: 4.5vw;
       }
-  
+
       @media screen and (width <=600px) {
         font-size: 5.5vw;
       }
-  
+
       @media screen and (width <=380px) {
         font-size: 6.5vw;
       }
     }
-    
+
     & p {
       font-size: 1.2vw;
       text-align: center;
       font-family: var(--Lato);
-  
+
       @media screen and (width <=1080px) {
         font-size: 1.7vw;
       }
-  
+
       @media screen and (width <=840px) {
         font-size: 2.5vw;
       }
-  
+
       @media screen and (width <=600px) {
         font-size: 3.1vw;
       }
-  
+
       @media screen and (width <=380px) {
         font-size: 3.4vw;
       }
     }
-}}
+  }
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 48px;
+  height: 48px;
+  background-color: #333;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}

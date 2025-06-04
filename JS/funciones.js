@@ -128,7 +128,7 @@ export async function llamadoNew() {
     } catch (error) {
         console.log(error);
     } finally {
-        mostrarSpinner(false)
+        // mostrarSpinner(false)
     }
 }
 
