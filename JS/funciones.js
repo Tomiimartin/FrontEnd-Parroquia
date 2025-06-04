@@ -87,6 +87,7 @@ export async function validarForm(e) {
 export async function llamadoNewsCMS() {
     const url = `${STRAPI_URL}news?fields[0]=fecha&fields[1]=informacion&fields[2]=titulo&fields[3]=documentId&populate[imagen][fields][0]=url&populate[imagen][fields][1]=name`;
     try {
+        mostrarSpinner(true);
         const res = await fetch(url);
         const data = await res.json();
         // verifico que este en la page index
@@ -319,7 +320,9 @@ function mostrarSpinner(boolean) {
     const bounce1 = document.getElementById("bounce1");
     const bounce2 = document.getElementById("bounce2");
     const bounce3 = document.getElementById("bounce3");
-    if (boolean) {
+    console.log(spinner, bounce1, bounce2, bounce3);
+    
+    if (boolean === true) {
         spinner.classList.add("spinner");
         bounce1.classList.add("bounce1");
         bounce2.classList.add("bounce2");
