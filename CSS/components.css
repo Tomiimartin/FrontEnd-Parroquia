@@ -3002,3 +3002,8 @@ h5 {
 .display-none { 
   display: none;
 }
+
+.add-spinner {
+  display: flex;
+  justify-content: center;
+}

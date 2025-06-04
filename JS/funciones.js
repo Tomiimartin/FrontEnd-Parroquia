@@ -322,13 +322,16 @@ function mostrarSpinner(boolean) {
     const bounce1 = document.getElementById("bounce1");
     const bounce2 = document.getElementById("bounce2");
     const bounce3 = document.getElementById("bounce3");
+    const divNew = document.querySelector(".section-new");
     if (boolean === true) {
+        divNew?.classList.add("add-spinner");
         spinner.classList.add("spinner");
         bounce1.classList.add("bounce1");
         bounce2.classList.add("bounce2");
         bounce3.classList.add("bounce3");
     }else{
         spinner.style.display = "none";
+        divNew?.classList.remove("add-spinner");
         spinner.classList.remove("spinner");
         bounce1.classList.remove("bounce1");
         bounce2.classList.remove("bounce2");
