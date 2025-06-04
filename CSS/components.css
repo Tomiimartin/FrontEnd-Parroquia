@@ -2960,6 +2960,7 @@ h5 {
 .spinner {
   width: 70px;
   text-align: center;
+  display: flex;
 }
 
 .spinner > div {
