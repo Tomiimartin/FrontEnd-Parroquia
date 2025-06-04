@@ -322,8 +322,6 @@ function mostrarSpinner(boolean) {
     const bounce1 = document.getElementById("bounce1");
     const bounce2 = document.getElementById("bounce2");
     const bounce3 = document.getElementById("bounce3");
-    console.log(spinner, bounce1, bounce2, bounce3);
-    
     if (boolean === true) {
         spinner.classList.add("spinner");
         bounce1.classList.add("bounce1");

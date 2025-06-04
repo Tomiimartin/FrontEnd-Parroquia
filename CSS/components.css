@@ -2958,14 +2958,13 @@ h5 {
 }
 
 .spinner {
-  margin: 100px auto 0;
   width: 70px;
   text-align: center;
 }
 
 .spinner > div {
-  width: 48px;
-  height: 48px;
+  width: 24px;
+  height: 24px;
   background-color: #333;
 
   border-radius: 100%;
