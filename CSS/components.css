@@ -2756,10 +2756,10 @@ h5 {
   text-align: center;
   margin-bottom: 36px;
   min-height: 90vh;
+  margin-top: 70px;
 }
 
 .conteiner-imgTop {
-  margin-top: 70px;
   position: relative;
   display: flex;
   flex-flow: column nowrap;
@@ -2997,4 +2997,8 @@ h5 {
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
   }
+}
+
+.display-none { 
+  display: none;
 }

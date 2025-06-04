@@ -328,6 +328,7 @@ function mostrarSpinner(boolean) {
         bounce2.classList.add("bounce2");
         bounce3.classList.add("bounce3");
     }else{
+        spinner.style.display = "none";
         spinner.classList.remove("spinner");
         bounce1.classList.remove("bounce1");
         bounce2.classList.remove("bounce2");
