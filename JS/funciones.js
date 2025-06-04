@@ -121,11 +121,14 @@ export async function llamadoNew() {
     }
 
     try {
+        mostrarSpinner(true);
         const response = await fetch(`${STRAPI_URL}news/${Id}?fields[0]=fecha&fields[1]=informacion&fields[2]=titulo&fields[3]=documentId&populate[imagen][fields][0]=url&populate[imagen][fields][1]=name`);
         const data = await response.json();
         crearNew(data.data)
     } catch (error) {
         console.log(error);
+    } finally {
+        mostrarSpinner(false)
     }
 }
 
@@ -230,7 +233,6 @@ function crearNew(data) {
     }
 
     const contenedor = document.querySelector(".section-new");
-    console.log("data de crar new",data);
     
     const { imagen: { name, url, }, informacion, fecha, titulo } = data;
     
@@ -310,6 +312,24 @@ function ErroNew() {
     contenedor.classList.add("errorNew");
     contenedor.appendChild(cont);
 
+}
+
+function mostrarSpinner(boolean) {
+    const spinner = document.getElementById("spinner");
+    const bounce1 = document.getElementById("bounce1");
+    const bounce2 = document.getElementById("bounce2");
+    const bounce3 = document.getElementById("bounce3");
+    if (boolean) {
+        spinner.classList.add("spinner");
+        bounce1.classList.add("bounce1");
+        bounce2.classList.add("bounce2");
+        bounce3.classList.add("bounce3");
+    }else{
+        spinner.classList.remove("spinner");
+        bounce1.classList.remove("bounce1");
+        bounce2.classList.remove("bounce2");
+        bounce3.classList.remove("bounce3");
+    }
 }
 
 function limpiarImagenes(htmlString) {
