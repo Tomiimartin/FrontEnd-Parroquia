@@ -230,7 +230,8 @@ function crearNew(data) {
     }
 
     const contenedor = document.querySelector(".section-new");
-
+    console.log("data de crar new",data);
+    
     const { imagen: { name, url, }, informacion, fecha, titulo } = data;
     
     const containerImgTop = document.createElement('div');
