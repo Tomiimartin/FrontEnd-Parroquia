@@ -1,364 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>Parroquia Nuestra Señora de la Merced</title>
-    <meta name="description"
-        content="Sitio web oficial de la Parroquia Nuestra Señora de la Merced, la parroquia cuenta con x comunidades, todas ubicadas en la ciudad de Resistencia provincia del Chaco." />
-    <meta name="keywords" content="Nuestra Señora de la Merced, Parroquia la Merced, Resistencia, Chaco " />
-    <meta name="author" content="Tomas Martin" />
-    <meta name="copyright" content="Parroquia la Merced" />
-    <meta name="robots" content="index" />
-    <link rel="stylesheet" href="./CSS/styles.css">
-    <link rel="stylesheet" href="./CSS/components.css">
-    <link rel="stylesheet" href="./CSS/estilos-Locales.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet"
-    >
-    <link rel="icon" href="./MEDIA/icons/LOGO.png">
-    <script src="https://kit.fontawesome.com/e90800b03d.js" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/6390f99ab9.js" crossorigin="anonymous"></script>
-    <script src="./JS/animaciones.js"></script>
-    <script>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent">
+        <meta name="mobile-web-app-capable" content="yes">
+        <title>Parroquia Nuestra Señora de la Merced</title>
+        <meta name="description"
+            content="Sitio web oficial de la Parroquia Nuestra Señora de la Merced, la parroquia cuenta con x comunidades, todas ubicadas en la ciudad de Resistencia provincia del Chaco." />
+        <meta name="keywords"
+            content="Nuestra Señora de la Merced, Parroquia la Merced, Resistencia, Chaco " />
+        <meta name="author" content="Tomas Martin" />
+        <meta name="copyright" content="Parroquia la Merced" />
+        <meta name="robots" content="index" />
+        <link rel="stylesheet" href="./CSS/styles.css">
+        <link rel="stylesheet" href="./CSS/components.css">
+        <link rel="stylesheet" href="./CSS/estilos-Locales.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="icon" href="./MEDIA/icons/LOGO.png">
+        <script src="https://kit.fontawesome.com/e90800b03d.js"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/6390f99ab9.js"
+            crossorigin="anonymous"></script>
+        <script src="./JS/animaciones.js"></script>
+        <script>
         window.env = {
           BACKEND_URL: `${BACKEND_URL}`,
           STRAPI_URL: `${STRAPI_URL}`
         };
     </script>
-</head>
+    </head>
 
-<body>
-    <div class="siderBar display-None">
-        <div class="color-fondo"></div>
-        <div class="conteiner-siderBar">
-            <div class="arrow-siderBar-Close" style="display: none;" onclick="displaySiderClose()"></div>
-            <div class="conteiner-buttom">
-                <a class="enlace-siderbar enlace-donar" href="#section-donaciones" onclick="displaySiderClose()">Donar</a>
-                <a href="calendario.html" class="enlace-siderbar">Calendario</a>
-                <a href="noticias.html" class="enlace-siderbar MW170">Novedades</a>
-                <a href="comunidades.html" class="enlace-siderbar">Comunidades</a>
+    <body>
+        <div class="siderBar display-None">
+            <div class="color-fondo"></div>
+            <div class="conteiner-siderBar">
+                <div class="arrow-siderBar-Close" style="display: none;"
+                    onclick="displaySiderClose()"></div>
+                <div class="conteiner-buttom">
+                    <a class="enlace-siderbar enlace-donar"
+                        href="#section-donaciones"
+                        onclick="displaySiderClose()">Donar</a>
+                    <a href="calendario.html"
+                        class="enlace-siderbar">Calendario</a>
+                    <a href="noticias.html"
+                        class="enlace-siderbar MW170">Novedades</a>
+                    <a href="comunidades.html"
+                        class="enlace-siderbar">Comunidades</a>
+                </div>
+                <div class="social">
+                    <a
+                        href="https://www.youtube.com/@parroquialamercedresistenc3327/featured"
+                        target="_blank">
+                        <i class="fa-brands fa-youtube i-youtube"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a href="https://www.facebook.com/pquialamercedrcia"
+                        target="_blank">
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a
+                        href="https://www.instagram.com/pquia.lamerced_resistencia/"
+                        target="_blank">
+                        <i class="fa-brands fa-instagram i-instagram"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                </div>
+                <a
+                    href="https://www.google.com/maps?q=-27.47795518819804, -58.95372686408571"
+                    class="ubic-siderbar">
+                    <i class="fa-solid fa-location-dot fa-lg"
+                        style="color: #000000;"></i>
+                    Aristobulo del valle 3502
+                </a>
             </div>
-            <div class="social">
-                <a href="https://www.youtube.com/@parroquialamercedresistenc3327/featured" target="_blank"> 
-                    <i class="fa-brands fa-youtube i-youtube" style="color: #2a5a4f;"></i>
-                </a>
-                <a href="https://www.facebook.com/pquialamercedrcia" target="_blank"> 
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a href="https://www.instagram.com/pquia.lamerced_resistencia/" target="_blank"> 
-                    <i class="fa-brands fa-instagram i-instagram" style="color: #2a5a4f;"></i>
-                </a>
-            </div>
-            <a href="https://www.google.com/maps?q=-27.47795518819804, -58.95372686408571" 
-                class="ubic-siderbar">
-                <i class="fa-solid fa-location-dot fa-lg" style="color: #000000;"></i>
-                Aristobulo del valle 3502
-            </a>
         </div>
-    </div>
 
-    <div class="hero">
-        <div class="container--hero">
-            <header class="top--hero">
-                <div class="content-top--hero">
-                    <div class="container-logo">
-                        <img src="./MEDIA/icons/LOGO.png" alt="logo">
-                        <p class="text-logo">Parroquia Nuestra Señora de la Merced</p>
+        <div class="hero">
+            <div class="container--hero">
+                <header class="top--hero">
+                    <div class="content-top--hero">
+                        <div class="container-logo">
+                            <img src="./MEDIA/icons/LOGO.png" alt="logo">
+                            <p class="text-logo">Parroquia Nuestra Señora de la
+                                Merced</p>
+                        </div>
+                        <div class="nav-scroll" style="display: none;">
+                            <a class href="#section-novedades"
+                                id="link-novedadesTop">Novedades</a>
+                            <a class href="#section-horarios"
+                                id="link-horariosTop">Horarios</a>
+                            <a class="donar" href="#section-donaciones"
+                                id="link-donacionesTop">Donar</a>
+                            <a class="donar donar__small"
+                                href="#section-donaciones"
+                                style="display: none;"
+                                id="link-donacionesTop__small">Donaciones</a>
+                            <a class href="#section-contacto"
+                                id="link-contactoTop">Contacto</a>
+                            <a class="calendario"
+                                href="calendario.html">Calendario</a>
+                            <a class="comunidad"
+                                href="comunidades.html">Comunidad</a>
+                        </div>
+                        <p class="text-scroll__mobile"
+                            style="display: none;">Parroquia Nuestra Señora de
+                            la Merced</p>
+                        <p class="text-scroll__mobile-small"
+                            style="display: none;">Nuestra Señora de la
+                            Merced</p>
+                        <div class="social">
+                            <a
+                                href="https://www.youtube.com/@parroquialamercedresistenc3327/featured"
+                                target="_blank">
+                                <i class="fa-brands fa-youtube i-youtube"
+                                    style="color: #2a5a4f;"></i>
+                            </a>
+                            <a href="https://www.facebook.com/pquialamercedrcia"
+                                target="_blank">
+                                <i class="fa-brands fa-facebook i-facebook"
+                                    style="color: #2a5a4f;"></i>
+                            </a>
+                            <a
+                                href="https://www.instagram.com/pquia.lamerced_resistencia/"
+                                target="_blank">
+                                <i class="fa-brands fa-instagram i-instagram"
+                                    style="color: #2a5a4f;"></i>
+                            </a>
+                        </div>
+                        <div class="arrow-left" style="display: none;"
+                            onclick="displaySiderOpen()">
+                        </div>
                     </div>
-                    <div class="nav-scroll" style="display: none;">
-                        <a class="" href="#section-novedades" id="link-novedadesTop">Novedades</a>
-                        <a class="" href="#section-horarios" id="link-horariosTop">Horarios</a>
-                        <a class="donar" href="#section-donaciones" id="link-donacionesTop">Donar</a>
-                        <a class="donar donar__small" href="#section-donaciones" style="display: none;"
-                            id="link-donacionesTop__small">Donaciones</a>
-                        <a class="" href="#section-contacto" id="link-contactoTop">Contacto</a>
-                        <a class="calendario" href="calendario.html">Calendario</a>
-                        <a class="comunidad" href="comunidades.html">Comunidad</a>
-                    </div>
-                    <p class="text-scroll__mobile" style="display: none;">Parroquia Nuestra Señora de la Merced</p>
-                    <p class="text-scroll__mobile-small" style="display: none;">Nuestra Señora de la Merced</p>
-                    <div class="social">
-                        <a href="https://www.youtube.com/@parroquialamercedresistenc3327/featured" target="_blank"> 
-                            <i class="fa-brands fa-youtube i-youtube" style="color: #2a5a4f;"></i>
-                        </a>
-                        <a href="https://www.facebook.com/pquialamercedrcia" target="_blank"> 
-                            <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                        </a>
-                        <a href="https://www.instagram.com/pquia.lamerced_resistencia/" target="_blank"> 
-                            <i class="fa-brands fa-instagram i-instagram" style="color: #2a5a4f;"></i>
-                        </a>
-                    </div>
-                    <div class="arrow-left" style="display: none;" onclick="displaySiderOpen()">
+                </header>
+                <div class="conteiner-nav--hero">
+                    <nav class="nav--hero">
+                        <a class="pointer" href="#section-novedades"
+                            id="link-novedades">Novedades</a>
+                        <a class="pointer" href="#section-horarios"
+                            id="link-horarios">Horarios</a>
+                        <a class="donar pointer" href="#section-donaciones"
+                            id="link-donaciones">Donar</a>
+                        <a class="donar donar__small pointer"
+                            style="display: none;" href="#section-donaciones"
+                            id="link-donaciones__small">Donaciones</a>
+                        <a class=" pointer" href="#section-contacto"
+                            id="link-contacto">Contacto</a>
+                        <a class="calendario pointer"
+                            href="calendario.html">Calendario</a>
+                        <a class="comunidad pointer"
+                            href="comunidades.html">Comunidad</a>
+                    </nav>
+                </div>
+                <h1 class="title--hero">Parroquia Nuestra Señora de la
+                    Merced<span>Resistencia, Chaco</span></h1>
+            </div>
+            <div class="arrow-down" onclick="scrollArrowDown()"></div>
+        </div>
+
+        <main>
+            <section id="section-novedades"
+                class="container-section__novedades">
+                <h2 class="tittle-novedades tittle-sections">NOVEDADES</h2>
+                <div class="content-art__novedades">
+                    <!-- creacion dinamica desde CMS -->
+                    <div id="spinner">
+                        <div id="bounce1"></div>
+                        <div id="bounce2"></div>
+                        <div id="bounce3"></div>
                     </div>
                 </div>
-            </header>
-            <div class="conteiner-nav--hero">
-                <nav class="nav--hero">
-                    <a class="pointer" href="#section-novedades" id="link-novedades">Novedades</a>
-                    <a class="pointer" href="#section-horarios" id="link-horarios">Horarios</a>
-                    <a class="donar pointer" href="#section-donaciones" id="link-donaciones">Donar</a>
-                    <a class="donar donar__small pointer" style="display: none;" href="#section-donaciones" id="link-donaciones__small">Donaciones</a>
-                    <a class=" pointer" href="#section-contacto" id="link-contacto">Contacto</a>
-                    <a class="calendario pointer" href="calendario.html">Calendario</a>
-                    <a class="comunidad pointer" href="comunidades.html">Comunidad</a>
-                </nav>
-            </div>
-            <h1 class="title--hero">Parroquia Nuestra Señora de la Merced<span>Resistencia, Chaco</span></h1>
-        </div>
-        <div class="arrow-down" onclick="scrollArrowDown()"></div>
-    </div>
-
-    <main>
-        <section id="section-novedades" class="container-section__novedades">
-            <h2 class="tittle-novedades tittle-sections">NOVEDADES</h2>
-            <div class="content-art__novedades">
-                <!-- creacion dinamica desde CMS -->
-                <div id="spinner">
-                    <div id="bounce1"></div>
-                    <div id="bounce2"></div>
-                    <div id="bounce3"></div>
-                </div>
-            </div>
-            <a href="noticias.html" class="btn VerMasN">Ver mas
-                Novedades</a>
-        </section>
-        <section id="section-horarios" class="container-section__horarios">
-            <h2 class="tittle-horarios tittle-sections">HORARIOS</h2>
-            <section class="content-art__horarios">
-                <!-- creacion dinamica segun el cms -->
+                <a href="noticias.html" class="btn VerMasN">Ver mas
+                    Novedades</a>
             </section>
-            <a href="calendario.html" class="btn ToCalendario">Calendario de Actividades</a>
-        </section>
-        <div id="section-donaciones" class="cbp">
-            <h2 class=" tittle-donaciones tittle-sections">Colecta Virtual</h2>
-            <h2 class=" tittle-donaciones__desktop tittle-sections" style="display: none;">Tu aporte nos sostiene</h2>
-            <div class="container-img" ;">
-                <img src="./MEDIA/PHOTOS/Donar (2064x1000).jpg" alt="donaciones">
-                <div class="container-text__big" style="display: none;">
-                    <p class="parrafo">"Donar significa mirar e ir más allá de uno mismo, más allá de las necesidades individuales, y abrirse generosamente hacia un bien más amplio."</p>
+            <section id="section-horarios" class="container-section__horarios">
+                <h2 class="tittle-horarios tittle-sections">HORARIOS</h2>
+                <section class="content-art__horarios">
+                    <!-- creacion dinamica segun el cms -->
+                </section>
+                <a href="calendario.html" class="btn ToCalendario">Calendario de
+                    Actividades</a>
+            </section>
+            <div id="section-donaciones" class="cbp">
+                <h2 class=" tittle-donaciones tittle-sections">Colecta
+                    Virtual</h2>
+                <h2 class=" tittle-donaciones__desktop tittle-sections"
+                    style="display: none;">Tu aporte nos sostiene</h2>
+                <div class="container-img" ;">
+                    <img src="./MEDIA/PHOTOS/Donar (2064x1000).jpg"
+                        alt="donaciones">
+                    <div class="container-text__big" style="display: none;">
+                        <p
+                            class="parrafo">"Donar significa mirar e ir más allá de uno mismo, más allá de las necesidades individuales, y abrirse generosamente hacia un bien más amplio."</p>
+                        <p class="autor">Cita del Papa Francisco</p>
+                    </div>
+                </div>
+                <h2 class=" tittle-donaciones__tablet tittle-sections"
+                    style="display: none;">Tu aporte nos sostiene</h2>
+                <div class="container-box">
+                    <div class="box tranferencia">
+                        <div class="conteiner-rowTop"
+                            onclick="activarInfo(this.parentNode)">
+                            <div class="content-icons-text"><i
+                                    class="fa-solid fa-landmark"></i>
+                                <p>Transferencia Bancaria</p>
+                            </div>
+                            <div class="arrow-box"></div>
+                        </div>
+                        <div id="container-info">
+                            <div class="info-box info-Tmp">
+                                <p class="info-tarjeta"><span>Cuenta:
+                                    </span>Nuevo Banco del Chaco</p>
+                                <p class="info-tarjeta"><span>Titular:
+                                    </span>Parroquia Ntra Sra De La Merced</p>
+                                <p class="info-tarjeta"><span>CBU:
+                                    </span>3110030211000112381057</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box tarjeta">
+                        <div class="conteiner-rowTop"
+                            onclick="activarInfo(this.parentNode)">
+                            <div class="content-icons-text"><i
+                                    class="fa-solid fa-credit-card"></i>
+                                <p>Mercado Pago</p>
+                            </div>
+                            <div class="arrow-box"></div>
+                        </div>
+                        <div id="container-info">
+                            <div class="info-box info-Tmp">
+                                <p class="info-tarjeta"><span>Titular:
+                                    </span>Oscar Francisco Rios</p>
+                                <p class="info-tarjeta"><span>CVU:
+                                    </span>0000003100083598298448</p>
+                                <p class="info-tarjeta"><span>Alias:
+                                    </span>lamercedlaliguria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box presencial">
+                        <div class="conteiner-rowTop"
+                            onclick="activarInfo(this.parentNode)">
+                            <div class="content-icons-text"><i
+                                    class="fa-solid fa-church"
+                                    style="color: #000000;"></i>
+                                <p>Donaciones Presenciales</p>
+                            </div>
+                            <div class="arrow-box"></div>
+                        </div>
+                        <div id="container-info">
+                            <div class="info-box info-Tmp">
+                                <p class="info-tarjeta">
+                                    Se pueden realizar donaciones en secretaria
+                                    parroquial, los días <span>martes</span> y
+                                    <span>viernes</span> en el horario de
+                                    <span>16</span> a <span>20</span> horas.
+                                </p>
+                                <p class="info-tarjeta">Además, los
+                                    <span>domingos</span> antes y despues de
+                                    misa</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-text__donaciones">
+                    <p class="parrafo">"Donar significa mirar e ir más allá de
+                        uno mismo, más allá de las necesidades
+                        individuales y abrirse generosamente hacia un bien más
+                        amplio”</p>
                     <p class="autor">Cita del Papa Francisco</p>
                 </div>
             </div>
-            <h2 class=" tittle-donaciones__tablet tittle-sections" style="display: none;">Tu aporte nos sostiene</h2>
-            <div class="container-box">
-                <div class="box tranferencia">
-                    <div class="conteiner-rowTop" onclick="activarInfo(this.parentNode)">
-                        <div class="content-icons-text"><i class="fa-solid fa-landmark"></i>
-                            <p>Transferencia Bancaria</p>
+            <div id="section-contacto" class="container-section__contacto">
+                <h2 class="tittle-sections tittle-contacto">Contacto</h2>
+                <div class="conteiner-info">
+                    <div class="conteiner-dates-map">
+                        <div class="content-api-maps">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1488.266950254524!2d-58.95383009859263!3d-27.478121656659237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450d3267798149%3A0x267294e209e34410!2sParroquia%20La%20Merced!5e0!3m2!1ses-419!2sar!4v1738611946005!5m2!1ses-419!2sar"
+                                style="border:0;" allowfullscreen loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
                         </div>
-                        <div class="arrow-box"></div>
-                    </div>
-                    <div id="container-info">
-                        <div class="info-box info-Tmp">
-                            <p class="info-tarjeta"><span>Cuenta: </span>Nuevo Banco del Chaco</p>
-                            <p class="info-tarjeta"><span>Titular: </span>Parroquia Ntra Sra De La Merced</p>
-                            <p class="info-tarjeta"><span>CBU: </span>3110030211000112381057</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box tarjeta">
-                    <div class="conteiner-rowTop" onclick="activarInfo(this.parentNode)">
-                        <div class="content-icons-text"><i class="fa-solid fa-credit-card"></i>
-                            <p>Mercado Pago</p>
-                        </div>
-                        <div class="arrow-box"></div>
-                    </div>
-                    <div id="container-info">
-                        <div class="info-box info-Tmp">
-                            <p class="info-tarjeta"><span>Titular: </span>Oscar Francisco Rios</p>
-                            <p class="info-tarjeta"><span>CVU: </span>0000003100083598298448</p>
-                            <p class="info-tarjeta"><span>Alias: </span>lamercedlaliguria</p> 
+                        <div class="content-email-tel">
+                            <div class="info"><i
+                                    class="fa-solid fa-envelope fa-lg"></i><a
+                                    href="mailto:elcorreoquequieres@correo.com?Subject=Aquí%20el%20asunto%20del%20mail"
+                                    class="info-text info-text__email ">pqui.lamerced.resistencia@gmail.com</a>
+                            </div>
+        
                         </div>
                     </div>
-                </div>
-                <div class="box presencial">
-                    <div class="conteiner-rowTop" onclick="activarInfo(this.parentNode)">
-                        <div class="content-icons-text"><i class="fa-solid fa-church" style="color: #000000;"></i>
-                            <p>Donaciones Presenciales</p>
-                        </div>
-                        <div class="arrow-box"></div>
-                    </div>
-                    <div id="container-info">
-                        <div class="info-box info-Tmp">
-                            <p class="info-tarjeta">
-                                Se pueden realizar donaciones en secretaria parroquial, los días <span>martes</span> y <span>viernes</span> en el horario de <span>16</span> a <span>20</span> horas.
-                            </p>
-                            <p class="info-tarjeta">Además, los <span>domingos</span> antes y despues de misa</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-text__donaciones">
-                <p class="parrafo">"Donar significa mirar e ir más allá de uno mismo, más allá de las necesidades
-                    individuales y abrirse generosamente hacia un bien más amplio”</p>
-                <p class="autor">Cita del Papa Francisco</p>
-            </div>
-        </div>
-        <div id="section-contacto" class="container-section__contacto">
-            <h2 class="tittle-sections tittle-contacto">Contacto</h2>
-            <div class="conteiner-info">
-                <div class="conteiner-dates-map">
-                    <div class="content-api-maps">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1488.266950254524!2d-58.95383009859263!3d-27.478121656659237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450d3267798149%3A0x267294e209e34410!2sParroquia%20La%20Merced!5e0!3m2!1ses-419!2sar!4v1738611946005!5m2!1ses-419!2sar"
-                            style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                    <div class="content-email-tel">
-                        <div class="info"><i class="fa-solid fa-envelope fa-lg"></i><a
-                                href="mailto:elcorreoquequieres@correo.com?Subject=Aquí%20el%20asunto%20del%20mail"
-                                class="info-text info-text__email ">pqui.lamerced.resistencia@gmail.com</a></div>
-                        <div class="info"><i class="fa-solid fa-phone fa-lg"></i><a href="tel:3624448436"
-                                class="info-text info-text__tel " color>3624448436</a> </div>
-                    </div>
-                </div>
-                <div class="container-info_small">
-                    <div class="conteiner-info__top">
-                        <div class="info info__tel">
-                            <img src="./MEDIA/icons/phone-D.png" alt="">
-                            <a href="tel:3624448436" class="info-text info-text__tel info-anim" color>3624448436
-                            </a>
-                        </div>
+                    <div class="container-info_small">
                         <div class="info info__ubic">
-                            <img src="./MEDIA/icons/location-D.png" alt="icono-ubicacion">
-                            <a href="https://www.google.com/maps?q=-27.47795518819804, -58.95372686408571"
-                                target="_blank" class="info-text info-text__ubic info-anim">Aristobulo del valle
+                            <img src="./MEDIA/icons/location-D.png"
+                                alt="icono-ubicacion">
+                            <a
+                                href="https://www.google.com/maps?q=-27.47795518819804, -58.95372686408571"
+                                target="_blank"
+                                class="info-text info-text__ubic info-anim">Aristobulo
+                                del valle
                                 3502
                             </a>
                         </div>
-                    </div>
-                    <div class="info info__email"><img src="./MEDIA/icons/email-D.png" alt="">
-                        <a href="mailto:pqui.lamerced.resistencia@gmail.com"
-                            class="info-text info-text__email info-anim">pqui.lamerced.resistencia@gmail.com
-                        </a>
-                    </div>
-                </div>
-                <div class="content-form">
-                    <h4 class="title__form">Envíanos tu consulta</h4>
-                    <form action="">
-                        <div class="conteiner-email-tel__form">
-                            <input type="email" name="email" id="" placeholder="TuCorreo@personal.com" required>
-                            <input type="tel" name="tel" pattern="[0-9]*" inputmode="numeric"
-                                placeholder="Telefono personal" title="Solo se acepta numeros" required>
+                        <div class="info info__email"><img
+                                src="./MEDIA/icons/email-D.png" alt>
+                            <a href="mailto:pqui.lamerced.resistencia@gmail.com"
+                                class="info-text info-text__email info-anim">pqui.lamerced.resistencia@gmail.com
+                            </a>
                         </div>
-                        <div class="conteiner-nombre-asunto__form">
-                            <input type="text" name="nombre" id="" placeholder="Nombre" required>
-                            <input type="text" name="asunto" id="" placeholder="Asunto: Fiesta Patronal" required>
+                    </div>
+                    <div class="content-form">
+                        <h4 class="title__form">Envíanos tu consulta</h4>
+                        <form action>
+                            <div class="conteiner-email-tel__form">
+                                <input type="email" name="email" id
+                                    placeholder="TuCorreo@personal.com"
+                                    required>
+                                <input type="tel" name="tel" pattern="[0-9]*"
+                                    inputmode="numeric"
+                                    placeholder="Telefono personal"
+                                    title="Solo se acepta numeros" required>
+                            </div>
+                            <div class="conteiner-nombre-asunto__form">
+                                <input type="text" name="nombre" id
+                                    placeholder="Nombre" required>
+                                <input type="text" name="asunto" id
+                                    placeholder="Asunto: Fiesta Patronal"
+                                    required>
+                            </div>
+                            <textarea name="mensaje" id="mensaje"
+                                placeholder="Escribe tu mensaje..."
+                                required></textarea>
+                            <input type="submit" value="ENVIAR">
+                        </form>
+                        <span class="loader"></span>
+                    </div>
+                </div>
+            </div>
+            <div id="section-comunidades"
+                class="container-section__comunidades">
+                <div class="content-titulos__comunidades">
+                    <h2
+                        class="tittle-sections tittle-comunidades">Comunidades</h2>
+                    <p>Conoce y sigue a nuestras comunidades</p>
+                </div>
+
+                <div class="content-cards__comunidades">
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/capilla.sanpantaleon.5"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>San Pantaleon</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
                         </div>
-                        <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje..."
-                            required></textarea>
-                        <input type="submit" value="ENVIAR">
-                    </form>
-                    <span class="loader"></span>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/profile.php?id=100091782503329"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>San Jose Obrero</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
+                        </div>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/jesus.buenpastor.3114?rdid=c1hhg56WtbzZrJMH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F162NCdoM3h%2F"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>Jesus Buen Pastor</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
+                        </div>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/share/1AFuUeuh2J/"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>Cristo Liberador</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
+                        </div>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/share/1B7YqrubRY/"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>Jesus Buena Esperanza</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
+                        </div>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/profile.php?id=100067585761602"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>Cristo Misericordioso</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
+                        </div>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/share/15MWfv3TJK/"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>Santa Catalina</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
+                        </div>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/profile.php?id=100011066227903&mibextid=ZbWKw"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>Cristo Redentor</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
+                        </div>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
+                    <a class="card-comunidades"
+                        href="https://www.facebook.com/pquialamercedrcia"
+                        target="_blank">
+                        <div class="card-comunidades__texto">
+                            <p>Merced Centro</p>
+                            <i class="fa-solid fa-arrow-right"
+                                style="color: #2a5a4f;"></i>
+                        </div>
+                        <i class="fa-brands fa-facebook i-facebook"
+                            style="color: #2a5a4f;"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-        <div id="section-comunidades" class="container-section__comunidades">
-            <div class="content-titulos__comunidades">
-                <h2 class="tittle-sections tittle-comunidades">Comunidades</h2>
-                <p>Conoce y sigue a nuestras comunidades</p>
-            </div>
+        </main>
 
-            <div class="content-cards__comunidades">
-                <a class="card-comunidades" href="https://www.facebook.com/capilla.sanpantaleon.5" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>San Pantaleon</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a class="card-comunidades" href="https://www.facebook.com/profile.php?id=100091782503329" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>San Jose Obrero</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a class="card-comunidades" href="https://www.facebook.com/jesus.buenpastor.3114?rdid=c1hhg56WtbzZrJMH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F162NCdoM3h%2F" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>Jesus Buen Pastor</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a class="card-comunidades"href="https://www.facebook.com/share/1AFuUeuh2J/" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>Cristo Liberador</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a class="card-comunidades" href="https://www.facebook.com/share/1B7YqrubRY/" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>Jesus Buena Esperanza</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a class="card-comunidades"href="https://www.facebook.com/profile.php?id=100067585761602" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>Cristo Misericordioso</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a class="card-comunidades"href="https://www.facebook.com/share/15MWfv3TJK/" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>Santa Catalina</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a class="card-comunidades"href="https://www.facebook.com/profile.php?id=100011066227903&mibextid=ZbWKw" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>Cristo Redentor</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-                <a class="card-comunidades"href="https://www.facebook.com/pquialamercedrcia" target="_blank">
-                    <div class="card-comunidades__texto">
-                        <p>Merced Centro</p>
-                        <i class="fa-solid fa-arrow-right" style="color: #2a5a4f;"></i>
-                    </div>
-                    <i class="fa-brands fa-facebook i-facebook" style="color: #2a5a4f;"></i>
-                </a>
-            </div>
-        </div>
-    </main>
-    
-    <footer class="footer">
-        <div class="conteiner-footer">
-            <div class="content-P">
-                <div class="content-logo-info">
-                    <img src="./MEDIA/icons/LOGO(110px).png" alt="">
-                    <div class="text">
-                        <p>¡Gracias por visitar nuestra web!</p>
-                        <p>En nuestra comunidad siempre serán bienvenidos los bienaventurados.</p>
+        <footer class="footer">
+            <div class="conteiner-footer">
+                <div class="content-P">
+                    <div class="content-logo-info">
+                        <img src="./MEDIA/icons/LOGO(110px).png" alt>
+                        <div class="text">
+                            <p>¡Gracias por visitar nuestra web!</p>
+                            <p>En nuestra comunidad siempre serán bienvenidos
+                                los bienaventurados.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="content-copy">
-                <a href="https://github.com/Tomas-Martin-dev" target="_blank">
-                    <p>Copyright 2024 RIghtly</p>
-                    <p>By Tomas Martin dev</p>
-                </a>
+                <div class="content-copy">
+                    <a href="https://github.com/Tomas-Martin-dev"
+                        target="_blank">
+                        <p>Copyright 2024 RIghtly</p>
+                        <p>By Tomas Martin dev</p>
+                    </a>
+                </div>
             </div>
-        </div>
-    </footer>
-    <script src="./JS/animaciones.js"></script>
-    <script src="./JS/app.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-</body>
+        </footer>
+        <script src="./JS/animaciones.js"></script>
+        <script src="./JS/app.js" type="module"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </body>
 
 </html>

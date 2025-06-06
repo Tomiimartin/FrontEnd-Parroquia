@@ -1761,7 +1761,6 @@ body {
       flex-flow: column nowrap;
       align-items: center;
       gap: 8px;
-      max-width: 200px;
       min-width: 0px;
     }
 
@@ -1773,7 +1772,7 @@ body {
 
     & .info__ubic {
       img {
-        max-width: 36px;
+        max-width: 60px;
       }
 
       span {
@@ -1782,8 +1781,6 @@ body {
     }
 
     & .info__email {
-      max-width: none;
-
       img {
         max-width: 60px;
       }
@@ -1792,7 +1789,6 @@ body {
 
   /* breakpoint mobile-small */
   @media screen and (width <=360px) {
-    max-width: 319px;
     min-width: 240px;
     padding: 32px 0;
     row-gap: 12px;
@@ -1815,6 +1811,8 @@ body {
     }
 
     & .info__ubic {
+      max-width: 318px;
+
       img {
         max-width: 32px;
       }
@@ -2963,7 +2961,7 @@ h5 {
   display: flex;
 }
 
-.spinner > div {
+.spinner>div {
   width: 24px;
   height: 24px;
   background-color: #333;
@@ -2985,21 +2983,34 @@ h5 {
 }
 
 @-webkit-keyframes sk-bouncedelay {
-  0%, 80%, 100% { -webkit-transform: scale(0) }
-  40% { -webkit-transform: scale(1.0) }
+
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0)
+  }
+
+  40% {
+    -webkit-transform: scale(1.0)
+  }
 }
 
 @keyframes sk-bouncedelay {
-  0%, 80%, 100% { 
+
+  0%,
+  80%,
+  100% {
     -webkit-transform: scale(0);
     transform: scale(0);
-  } 40% { 
+  }
+
+  40% {
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
   }
 }
 
-.display-none { 
+.display-none {
   display: none;
 }
 
